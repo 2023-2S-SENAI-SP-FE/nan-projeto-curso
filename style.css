@@ -1,0 +1,38 @@
+.pagProduto {
+    /* O corpo da pagina de produto*/
+}
+
+.propProduto {
+    /* Seção que agrupa propriedades do produto (ele está dentro de pagProduto) */
+}
+
+.fotosProdutos {
+    /* Ele está dentro de propProduto, ele vai agrupara as fotos do prudotos */
+}
+
+.containerFotoProdutoMiniatura {
+    /* Está dentro de fotosProdutos, agrupa a miniatura das fotos */
+}
+.fotoProdutoMiniatura {
+    /* A foto em miniatura */
+}
+
+.fotoProdutoPrincipal {
+    /* A foto principal do produto */
+}
+
+.infoProduto {
+    /* Armazena informações do produto, está dentro de propProdutos */
+}
+
+.iteracaoProduto {
+    /* Agrupa iterações do produto (frete, compra,etc), ele está dentro de propProdutos */
+}
+
+.prodsRelacionado {
+    /*  */
+}
+
+.descProduto {
+    /*  */
+}
