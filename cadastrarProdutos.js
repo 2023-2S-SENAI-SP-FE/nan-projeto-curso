@@ -1,9 +1,12 @@
-const data = {
-    nome: "bomba d'agua",
-    preco: 10.50
-}
+
 
 function postData(){
+
+    const data = {
+        nome: document.getElementById('nome').value,
+        preco: document.getElementById('preco').value
+    }
+    
     const response = fetch('https://655f35cd879575426b44d699.mockapi.io/api/produtos/produtos', {
         method: 'POST',
         headers: { 

@@ -7,6 +7,19 @@
     <script src="cadastrarProdutos.js"></script>
 </head>
 <body>
-    <button onclick="postData()">Post</button>
+        <div id="form">
+            <h2>Adicionar Produtos</h2>
+
+            <div class="controle-form">
+                <input class="form-value" type="text" id="nome" required>
+            </div>
+
+            <div class="controle-form">
+                <input class="form-value" type="text" id="preco" required>
+            </div>
+
+        </div>
+
+        <button type="submit" onclick="postData()">Cadastrar</button>
 </body>
 </html>
