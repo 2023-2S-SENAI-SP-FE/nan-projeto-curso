@@ -1,13 +1,30 @@
 .pagProduto {
     /* O corpo da pagina de produto*/
+    width: 100vw;
+    height: 600px;
+    background-color: red;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .propProduto {
     /* Seção que agrupa propriedades do produto (ele está dentro de pagProduto) */
+    width: 600px;
+    height: 500px;
+    background-color: gray;
+    display: flex;
+
 }
 
-.fotosProdutos {
+.fotosProduto {
     /* Ele está dentro de propProduto, ele vai agrupara as fotos do prudotos */
+    height: 90%;
+    width: 100px;
+    background-color: aqua;
 }
 
 .containerFotoProdutoMiniatura {
