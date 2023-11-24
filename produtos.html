@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Produtos</title>
+    <link rel="stylesheet" href="produtos.css">
 </head>
 <body>
         <div id="form">
@@ -34,10 +35,13 @@
                 <input class="form-value" type="text" id="img3" required>
             </div>
             
+            
+        <button type="submit" onclick="cadastrarProduto()">Cadastrar</button>
 
         </div>
-        <button type="submit" onclick="postData()">Cadastrar</button>
         
-        <script src="cadastrarProdutos.js"></script>
+        <div id="listaProdutos"></div>
+
+        <script src="produtos.js"></script>
 </body>
 </html>
