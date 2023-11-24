@@ -21,4 +21,12 @@ function postData(){
         },
         body: JSON.stringify(data)
     })
+
+    alert(`Produto adicionado com sucesso!`)
+    limparFormulario();
+}
+
+function limparFormulario(){
+    const campos = document.querySelectorAll('.form-value')
+    campos.forEach(campo => campo.value = '')
 }
