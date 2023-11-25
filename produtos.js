@@ -1,4 +1,4 @@
-let produtosData;
+listarProdutos();
 
 function cadastrarProduto(){
 
@@ -14,7 +14,7 @@ function cadastrarProduto(){
         status: 'disponível',
     }
     
-    const response = fetch('https://655f44c1879575426b44f818.mockapi.io/api/produtos', {
+    fetch('https://655f44c1879575426b44f818.mockapi.io/api/produtos', {
         method: 'POST',
         headers: { 
             "Content-Type": "application/json"
@@ -26,7 +26,6 @@ function cadastrarProduto(){
     limparFormulario();
     listarProdutos();
 }
-
 
 function listarProdutos() {
     limparFormulario();
@@ -56,8 +55,6 @@ function excluirProduto(id){
             alert("Produto excluído com sucesso!")
             listarProdutos();
 }
-
-listarProdutos();
 
 function editarProduto(id){
     
