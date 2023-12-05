@@ -1,14 +1,12 @@
 .pagProduto {
     /* O corpo da pagina de produto*/
     width: 100vw;
-    height: 600px;
     background-color: #fff;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+
 }
 
 .propProduto {
@@ -55,6 +53,20 @@
 
 .infoProduto {
     /* Armazena informações do produto, está dentro de propProdutos */
+}
+
+.descProduto{
+    display: flex;
+    width: 350px;
+    height: 150px;
+
+}
+
+.imagemProd{
+    background-color:#0B2447;
+    width: 600px;
+    height: 200px;
+    display: flex;
 }
 
 .iteracaoProduto {
