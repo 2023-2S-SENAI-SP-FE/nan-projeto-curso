@@ -6,10 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="categorias"></div>
-    <label for="nome">Nome
-        <input type="text" id="nome" ></label>
-    <button type="submit" onclick="cadastrarCategorias()"> Cadastrar</button>
+    <form id="form">
+            <div id="categorias"></div>
+            <label for="categoria">Categorias</label>
+
+            <input class="form-value" type="text" id="categoria">
+            <label for="nome">Nome</label>
+
+            <input class="form-value" type="text" id="nome"></label>
+            <label for="Produto">Produto</label>
+
+            <input class="form-value" type="text" id="produto">
+            <label for="preco">Preço</label>
+
+            <input class="form-value" type="number" id="Preço">
+            <button type="submit" onclick="cadastrarCategorias()">Cadastrar</button>
+            <button type="text" onclick="deleteProdutos()">Excluir</button>
+            <button type="text" onclick="editarform">Editar</button>
+    </form>
     <script src="./cadastro.js"></script>
 </body>
 </html>
