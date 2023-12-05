@@ -1,19 +1,21 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
+
+
 .pagProduto {
     /* O corpo da pagina de produto*/
-    width: 100vw;
-    height: 600px;
+    width: 100vw; 
     background-color: #fff;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    
 }
 
 .propProduto {
     /* Seção que agrupa propriedades do produto (ele está dentro de pagProduto) */
-    width: 600px;
+    width: 100%;
     height: 500px;
     background-color: #576CBC1A;
     display: flex;
@@ -24,14 +26,17 @@
 .fotosProduto {
     /* Ele está dentro de propProduto, ele vai agrupara as fotos do prudotos */
     height: 90%;
-    width: 100px;
-    background-color: aqua;
+    width: 695px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   
 }
 
 .containerFotoProdutoMiniatura {
     /* Está dentro de fotosProdutos, agrupa a miniatura das fotos */
-    width: 100%;
+    width: 100px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -46,25 +51,59 @@
 
     /* background-color: brown; */
 }
-
-.fotoProdutoPrincipal {
+.fotoProdutoPrincipal{
     /* A foto principal do produto */
     width: 450px;
-    height: 90%;
+    height: 450px;
+}
+
+.fotoProdutoPrincipal img{
+    /* A foto principal do produto */
+    width: 450px;
+    height: 450px;
 }
 
 .infoProduto {
     /* Armazena informações do produto, está dentro de propProdutos */
+    width: 400px;
+    height: 90%;
+   
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.containerEstrelas{
+    width: 125px;
+    height: 25px;
+    background-color: red;
 }
 
 .iteracaoProduto {
     /* Agrupa iterações do produto (frete, compra,etc), ele está dentro de propProdutos */
 }
 
+.iteracaoProduto{
+
+    width: 400px;
+    height: 90%;
+    background-color: #fff;
+}
+
 .prodsRelacionado {
     /*  */
+    width: 100%;
+    height: 600px;
+    background-color: red;
 }
 
 .descProduto {
     /*  */
+    width: 100%;
+    height: 600px;
+    background-color: blue;
 }
