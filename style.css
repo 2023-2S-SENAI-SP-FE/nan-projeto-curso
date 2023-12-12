@@ -1,3 +1,4 @@
+
 body{
     
 }
@@ -87,10 +88,6 @@ input::placeholder{
     cursor: pointer;
 }
 
-.cadastro input{
-
-}
-
 #oferta{
     background-color: rgb(216, 213, 213);
     border-radius: 5px;
@@ -110,7 +107,6 @@ nav.menu-lateral{
 /* .grid-container{
     display: grid;
     grid-template-columns: 200px 200px 200px;
-    background-color: aqua;
     padding: 10px;
     column-gap: 10px;
     row-gap: 10px;
@@ -120,9 +116,22 @@ nav.menu-lateral{
 }
 
 .grid-item{
-    background-color: rgb(0, 255, 200);
+    background-color: rgb(168, 185, 181);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
 } */
+
+.grid-conteiner {
+    border: 1px solid;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 200px 200px;
+}
+
+.grid-item {
+    display: flex;
+    text-align: center;
+    padding: 20px 0;
+}
