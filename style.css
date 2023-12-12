@@ -1,3 +1,6 @@
+
+
+
 .pagProduto {
     /* O corpo da pagina de produto*/
     width: 100vw;
@@ -64,10 +67,24 @@
 
 .imagemProd{
     background-color:#0B2447;
-    width: 600px;
-    height: 200px;
+    width: 230px;
+    height: 270px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
+.ContImagem {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: #f5f5dc;
+    width: 730px;
+    height: 280px;
+    border-radius: 5px solid #000 ;
+}
+
 
 .iteracaoProduto {
     /* Agrupa iterações do produto (frete, compra,etc), ele está dentro de propProdutos */
@@ -79,4 +96,15 @@
 
 .descProduto {
     /*  */
+}
+
+.informacoesdoProduto {
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+}
+
+button{
+    font-family: 'Poppins', sans-serif;
+    height: 40px;
+    width: 90px;
 }
