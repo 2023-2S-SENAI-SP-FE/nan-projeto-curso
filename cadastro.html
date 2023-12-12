@@ -7,23 +7,25 @@
 </head>
 <body>
     <form id="form">
-            <div id="categorias"></div>
-            <label for="categoria">Categorias</label>
-
-            <input class="form-value" type="text" id="categoria">
+            
+            <!-- <label for="categoria">Categorias</label> -->
             <label for="nome">Nome</label>
-
+            <input class="form-value" type="text" id="nome">
+        
+<!-- 
             <input class="form-value" type="text" id="nome"></label>
             <label for="Produto">Produto</label>
 
             <input class="form-value" type="text" id="produto">
-            <label for="preco">Preço</label>
+            <label for="preco">Preço</label> -->
 
-            <input class="form-value" type="number" id="Preço">
-            <button type="submit" onclick="cadastrarCategorias()">Cadastrar</button>
-            <button type="text" onclick="deleteProdutos()">Excluir</button>
-            <button type="text" onclick="editarform">Editar</button>
+            <!-- <input class="form-value" type="number" id="Preço"> -->
+            
+            <div id="botoes" >
+                <button type="submit" onclick="cadastrarCategorias()">Cadastrar</button>
+            </div>
     </form>
+    <div id="categorias"></div>
     <script src="./cadastro.js"></script>
 </body>
 </html>
