@@ -40,6 +40,18 @@ function listarProdutos() {
 
 }
 
+function listarCategorias() {
+    fetch('https://655f44c1879575426b44f818.mockapi.io/api/categorias')
+        .then((response) => response.json())
+        .then((categorias) => {
+            for (i = 0; i < categorias.length; i++){
+                document.getElementById('categoria').innerHTML += `<option value="${categorias[i].nome}">${categorias[i].nome}</option>`
+            }
+        })
+}
+
+listarCategorias();
+
 function limparFormulario(){
     const campos = document.querySelectorAll('.form-value')
     campos.forEach(campo => campo.value = '')
