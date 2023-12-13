@@ -108,3 +108,30 @@ button{
     height: 40px;
     width: 90px;
 }
+
+.calcFrete{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    width: 85px;
+}
+
+.carrinho{
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+    height: 20px;
+    width: 180px;
+}
+
+.freteProd{
+    padding-top: 10px;
+    background-color: #e2e0e0;
+    width: 220px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.alinhaSite {
+
+}
