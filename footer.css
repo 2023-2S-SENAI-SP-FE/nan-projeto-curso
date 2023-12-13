@@ -1,4 +1,8 @@
-.container{
-    display:flex
+.container {
+    display: grid;
     background-color: #19376D;
+    margin: auto;
+}
+.container h2,p {
+    color: #fff;
 }
