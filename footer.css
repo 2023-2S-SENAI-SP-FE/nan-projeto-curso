@@ -1,8 +1,22 @@
 .container {
-    display: grid;
+    display: flex;
     background-color: #19376D;
-    margin: auto;
+    justify-content: space-between;
 }
-.container h2,p {
+.container h2,p,li {
+    font-family:'Poppins', sans-serif; ;
     color: #fff;
+    font-size: 12pt;
+}
+.container h2 {
+    font-weight: 600;
+}
+.container p,li {
+    font-weight: 200;
+}
+.primeiracoluna {
+    padding-left: 7px;
+}
+.primeiracoluna h2, p, li{
+    padding: 5px 0px 5px 0px;
 }
