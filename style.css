@@ -1,4 +1,10 @@
-
+:root {
+    --cor-primária: #0B2447;
+    --cor-secundária: #19376D;
+    --cor-terciária: #576CBC;
+    --cor-quaternária: #A5D7E8;
+    --fonte-primária: 'Poppins', sans-serif;
+}
 
 
 .pagProduto {
@@ -58,15 +64,9 @@
     /* Armazena informações do produto, está dentro de propProdutos */
 }
 
-.descProduto{
-    display: flex;
-    width: 350px;
-    height: 150px;
-
-}
-
 .imagemProd{
     background-color:#0B2447;
+    padding: 5px;
     width: 230px;
     height: 270px;
     display: flex;
@@ -78,10 +78,11 @@
 .ContImagem {
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
     justify-content: space-evenly;
-    background-color: #f5f5dc;
-    width: 730px;
-    height: 280px;
+    background-color: var(--cor-quaternária);
+    width: 750px;
+    height: 300px;
     border-radius: 5px solid #000 ;
 }
 
@@ -94,8 +95,20 @@
     /*  */
 }
 
+.tituloDesc {
+    display: flex;
+    justify-content: center;
+    font-size: 18pt;
+    padding-bottom: 10px;
+}
+
 .descProduto {
-    /*  */
+    display: flex;
+    background-color: var(--cor-quaternária);
+    width: 735px;
+    height: 220px;
+    margin: 10px 0px 60px 0px;
+    padding: 7px;
 }
 
 .informacoesdoProduto {
