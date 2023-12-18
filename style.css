@@ -6,6 +6,68 @@
     --fonte-primária: 'Poppins', sans-serif;
 }
 
+.buscProd {
+    width:100%;
+    position: relative;
+    height: 50px;
+  }
+  input {
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 50px;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    z-index: 3;
+    transition: width 1s ease-out;
+    cursor: pointer;
+  }
+  input:focus { 
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 30%;
+    z-index: 1;
+    transition: width 1s ease-in;
+  }
+  .buttonBusc { 
+    height: 50px;
+    width: 50px;
+    background:  url('lupa.png')  center no-repeat;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .buttonBusc:focus {
+    outline: none;
+  }
+  /* esconde o LABEL "Buscar" */
+  label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;	
+  }
+
+
+
+
+
+
+
+
+
+
+
 
 .pagProduto {
     /* O corpo da pagina de produto*/
@@ -145,6 +207,14 @@ button{
     
 }
 
+informFrete {
+    display: grid;
+    grid-area: 100px 0px 10px 0px;
+}
+
+
 .alinhaSite {
+    display: grid;
+    grid-gap: 30px;
 
 }
