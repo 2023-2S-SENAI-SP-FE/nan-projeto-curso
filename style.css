@@ -6,6 +6,35 @@
     --fonte-primária: 'Poppins', sans-serif;
 }
 
+.logo {
+    display: flex;
+    justify-content: start;
+}
+
+.iniciaBusc {
+    width: 100%;
+    height: 55px;
+    background-color: var(--cor-primária);
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: var(--fonte-primária);
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.pesquisaBusc {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
 .buscProd {
     width:100%;
     position: relative;
@@ -77,6 +106,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    justify-content: flex-start;
 
 }
 
@@ -207,14 +237,17 @@ button{
     
 }
 
-informFrete {
-    display: grid;
-    grid-area: 100px 0px 10px 0px;
+.informFrete {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    
 }
 
 
 .alinhaSite {
     display: grid;
-    grid-gap: 30px;
+    gap: 20px;
+    
 
 }
