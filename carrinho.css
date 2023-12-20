@@ -1,24 +1,22 @@
-.bg {
-    background-color: #576CBC1A;
-    font-family: 'Poppins';
-    border: 1px;
-}
-
 table {
     width: 100%;
 }
+.corDeFundo {
+    display: flex;
+    background-color:#576CBC1A;
+    font-family: 'Poppins';
+    border: 1px solid #000000;
+    
+}
+
 .alinhamento {
     text-align: left;
-    padding: 5px 0 10px 10px;
+    /* flex-shrink: ; */
 }
 .alinhamento1 { 
-    padding: 5px 0 10px 0;
+    /* flex-grow: ; */
 }
 .alinhamento2 {
+    /* flex-shrink: ; */
     text-align: right;
-    padding: 5px 10px 10px 0;
-}
-.alinharCHead {
-    display: flex;
-    padding: 5px 10px 10px 0;
 }
