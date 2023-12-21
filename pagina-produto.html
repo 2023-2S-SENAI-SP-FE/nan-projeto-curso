@@ -10,7 +10,7 @@
 
     <div class="iniciaBusc">
 
-        <div class="logo">
+        <div class="logo" !important>
             <img src="./NaN.png" alt="" width="50px" height="60px">
         </div>
         <br>
@@ -18,7 +18,7 @@
 
         <div class="pesquisaBusc">
             <form action=" " method="post">
-                <label for="busca">Buscar</label>
+                <!-- <label for="busca">Buscar</label> -->
                 <input type="search" id="buscProd" name="q">
                 <button type="submit" class="buttonBusc"><img src="./lupa.png" alt="lupaBusc" width="20px"
                         height="30px"></button>
@@ -26,49 +26,37 @@
         </div>
     </div>
 
-    <aside class="informFrete">
-        <div class="freteProd">
 
-            <h3>Frete</h3>
-            <br>
-            <form action="">
-                <input type="search" name="valorFret" id="">
-                <button class="calcFrete" type="submit">Calcular</button>
-                <p>Estoque do produto disponível</p>
-                <p><u>Quantidade:</u> 30 disponíveis</p>
-                <br>
-                <button>Comprar</button>
-                <br>
-                <button class="carrinho">Adicionar ao carrinho</button>
-            </form>
+    <div class="alinhament">
+        
+        
 
-        </div>
-    </aside>
-
-    <article class="pagProduto">
+    <article class="pagProduto elemento1">
         <section class="propProduto">
             <section class="fotosProduto">
                 <div class="containerFotoProdutoMiniatura">
                     <figure class="fotoProdutoMiniatura">
                         <img src="https://img.freepik.com/free-vector/illustration-gear-doodle-icon_53876-5596.jpg?w=740&t=st=1701783918~exp=1701784518~hmac=137844fcf5793be4063ef708d0fe62537e72c0ea2d94f97b007f61e49cfca1b9"
-                            alt="">
+                        alt="">
                     </figure>
                     <figure class="fotoProdutoMiniatura">
                         <img src="https://img.freepik.com/free-vector/illustration-gear-doodle-icon_53876-5596.jpg?w=740&t=st=1701783918~exp=1701784518~hmac=137844fcf5793be4063ef708d0fe62537e72c0ea2d94f97b007f61e49cfca1b9"
-                            alt="">
+                        alt="">
                     </figure>
                     <figure class="fotoProdutoMiniatura">
                         <img src="https://img.freepik.com/free-vector/illustration-gear-doodle-icon_53876-5596.jpg?w=740&t=st=1701783918~exp=1701784518~hmac=137844fcf5793be4063ef708d0fe62537e72c0ea2d94f97b007f61e49cfca1b9"
-                            alt="">
+                        alt="">
                     </figure>
                     <figure class="fotoProdutoMiniatura">
                         <img src="https://img.freepik.com/free-vector/illustration-gear-doodle-icon_53876-5596.jpg?w=740&t=st=1701783918~exp=1701784518~hmac=137844fcf5793be4063ef708d0fe62537e72c0ea2d94f97b007f61e49cfca1b9"
-                            alt="">
+                        alt="">
                     </figure>
                 </div>
                 <div class="fotoProdutoPrincipal"></div>
             </section>
 
+            
+            
             <section class="infoProduto">
                 <h2>Titulo Produto</h2>
                 <div class="containerEstrelas">
@@ -78,20 +66,20 @@
                     <figure class="estrelas"></figure>
                     <figure class="estrelas"></figure>
                 </div>
-
+                
             </section>
-
+            
             <section class="iteracaoProduto">
-
+                
             </section>
-
+            
         </section>
-        <section class="prodsRelacionado">
+        <section class="prodsRelacionado elemento3">
             <div class="ContImagem">
                 <div class="imagemProd">
                     <figure>
                         <img src="https://http2.mlstatic.com/D_NQ_NP_2X_945251-MLB54553415351_032023-F.webp"
-                            alt="engrenagem" width="150px" height="120px">
+                        alt="engrenagem" width="150px" height="120px">
                     </figure>
                     <p class="informacoesdoProduto">Engrenagem Cilíndrica de Dentes Retos</p>
                     <p class="informacoesdoProduto">D 25/ P 2mm/ ND 70</p>
@@ -100,7 +88,7 @@
                 <div class="imagemProd">
                     <figure>
                         <img src="https://http2.mlstatic.com/D_NQ_NP_2X_945251-MLB54553415351_032023-F.webp" alt=""
-                            width="150px" height="120px">
+                        width="150px" height="120px">
                     </figure>
                     <p class="informacoesdoProduto">Engrenagem Cilíndrica de Dentes Retos</p>
                     <p class="informacoesdoProduto">D 37/ P 4mm/ ND 50</p>
@@ -109,16 +97,16 @@
                 <div class="imagemProd">
                     <figure>
                         <img src="https://http2.mlstatic.com/D_NQ_NP_2X_945251-MLB54553415351_032023-F.webp" alt=""
-                            width="150px" height="120px">
+                        width="150px" height="120px">
                     </figure>
                     <p class="informacoesdoProduto">Engrenagem Cilíndrica de Dentes Retos</p>
                     <p class="informacoesdoProduto">D 42/ P 3mm/ ND 90</p>
                     <button type="submit">Comprar</button>
                 </div>
             </div>
-
+            
         </section>
-
+        
         <section class="descProduto">
             <article>
                 <h2 class="tituloDesc">Descrição do Produto</h2>
@@ -134,8 +122,29 @@
                     Possimus esse sit nemo officia ipsum beatae sint laborum odio molestiae, aliquid quam cumque labore
                     iste minus quos qui, voluptatum, dignissimos nostrum quaerat facilis placeat commodi porro aliquam.
                     Quos enim nam aliquam at qui fugit doloribus.</p>
-            </article>
-        </section>
-    </article>
+                </article>
+            </section>
+        </article>
 
-</header>
+        <aside class="informFrete elemento2">
+            <div class="freteProd">
+                
+                <h3>Frete</h3>
+                <br>
+                <form action="">
+                    <input type="search" name="valorFret" id="">
+                    <button class="calcFrete" type="submit">Calcular</button>
+                    <p>Estoque do produto disponível</p>
+                    <p><u>Quantidade:</u> 30 disponíveis</p>
+                    <br>
+                    <button>Comprar</button>
+                    <br>
+                    <button class="carrinho">Adicionar ao carrinho</button>
+                </form>
+                
+            </div>
+        </aside>
+
+    </div>
+        
+    </header>
