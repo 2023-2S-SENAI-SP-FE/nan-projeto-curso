@@ -14,6 +14,8 @@
     height: 30px;
     width: 600px;
     margin-left: 150px;
+    border: 0;
+    padding-left: 10px;
 }
 input::placeholder{
     color: #fff;
@@ -25,7 +27,12 @@ input::placeholder{
     align-content: center;
     gap: 20px;
     padding-left: 80px;
+    background-color: rgb(87, 108, 188, 0.2);
     
+}
+.caixaSombra {
+    filter: drop-shadow(4px 4px 4px darkgray);
+    /* drop-shadow: 5px 10px 2px black; */
 }
 .usuario{
     font-size: 16px;
@@ -38,11 +45,10 @@ input::placeholder{
 }
 .usuario strong{
     display: flex;
-    
-    
+    font-weight: bold;
     position: absolute;
-
 }
+
 .login{
     display: flex;
     font-size: 12px;
@@ -71,6 +77,7 @@ input::placeholder{
     position: absolute;
     /* top: 65px; */
     margin: 20px;
+    font-weight: bold;
     
 }
 .carrinho{
@@ -81,6 +88,12 @@ input::placeholder{
     text-align: center;
     gap: 5px;
 }
+
+.carrinho i {
+    font-weight: bold;
+    font-size: 30px;
+}
+
 .cadastro{
     height: 55px;
     width: 100%;
@@ -101,13 +114,16 @@ input::placeholder{
     background-color: rgb(94, 94, 192);
     width: 60px;
     cursor: pointer;
+    border: 0;
 }
 
 #oferta{
-    background-color: rgb(216, 213, 213);
+    background-color: rgb(#fff);
     border-radius: 5px;
     margin-bottom: 5px;
     width: 340px;
+    border: 0;
+    margin-top: 5px;
     
 }
 #menu-lateral p{
@@ -117,7 +133,7 @@ input::placeholder{
 nav.menu-lateral{
     width: 250px;
     height: 120vh;
-    background-color: rgb(216, 213, 213);
+    background-color:  rgb(87, 108, 188, 0.2);
     column-gap: 70px;
     margin-right: 30px;
     padding-left: 15px;
@@ -139,20 +155,23 @@ button {
 }
 
 .produto {
-    background-color: rgb(235, 237, 237);
-    border: 1px solid #000;
+    background-color: rgb(87, 108, 188, 0.2);
     padding: 10px;
     display: flex;
     flex-direction: column;
     height: 280px;
     width: 260px;
     line-height: 1.5;
+    border: 0;
+    border-radius: 6px;
+
 }
 
 .produto button {
     margin-top: 10px;
     font-weight: bold;
     height: 50px;
+    border: 0;
 }
 
 .produto strong {
