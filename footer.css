@@ -56,3 +56,15 @@
 img {
    padding-right: 5px;
 }
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+a:hover{
+    color: rgba(138, 156, 226)
+}
+
+li{
+    list-style-type: none;
+}
