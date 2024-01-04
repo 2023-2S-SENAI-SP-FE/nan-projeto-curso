@@ -13,6 +13,10 @@
     justify-content: center; 
   }
 
+.paginaProdutoOculto{
+    display: none;
+}
+
 .paginaProduto{
     width: 930px;
     height: 1068px;
