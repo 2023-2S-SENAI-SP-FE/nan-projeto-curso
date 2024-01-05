@@ -12,13 +12,16 @@
 #searchbar{
     display: flex;
     border-radius: 5px;
-    background-color: rgb(94, 94, 192);
+    background-color: #5e5ec0;
     color: #fff;
     height: 30px;
     width: 600px;
     margin-left: 150px;
     border: 0;
     padding-left: 10px;
+    background: url("./buttonsearch.png") no-repeat right  / 1.3em  #5e5ec0;
+    padding-left: 1.3em;
+
 }
 input::placeholder{
     color: #fff;
@@ -158,9 +161,16 @@ nav.menu-lateral{
     line-height: 1.5;
 }
 
-button {
+.EnviaCompra {
     background-color: rgb(94, 94, 192);
     color: #fff;
+    box-shadow: 3px 4px #0B2447;
+    cursor: pointer;
+}
+
+.EnviaCompra:active{
+    background-color: #000;
+    transform: translateY(1.5px) ;
 }
 
 
