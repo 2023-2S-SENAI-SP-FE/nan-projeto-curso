@@ -1,22 +1,41 @@
 table {
     width: 100%;
 }
-.corDeFundo {
+.topo {
     display: flex;
-    background-color:#576CBC1A;
+    justify-content: space-between;
+    background-color: rgb(87, 108, 188, 0.2);
     font-family: 'Poppins';
+    font-weight: bold;
     border: 1px solid #000000;
+    border: 0;
+    margin: 20px;
+    padding: 10px;
+
     
 }
 
-.alinhamento {
-    text-align: left;
-    /* flex-shrink: ; */
+.alinhamento1 {
+    padding-left: 900px;
 }
-.alinhamento1 { 
-    /* flex-grow: ; */
+
+img {
+    height: 70px;
 }
-.alinhamento2 {
-    /* flex-shrink: ; */
-    text-align: right;
+
+.produto-carrinho {
+    display: flex;
+    
+}
+
+.imagem {
+    align-items: flex-start;
+}
+
+.titulo {
+
+}
+
+.subtitulo {
+    
 }
