@@ -44,6 +44,35 @@ function listarCategorias(){
         })
 }
 
+function listarCategoriaId(id){
+    fetch(`https://655f44c1879575426b44f818.mockapi.io/api/categorias/${id}`)
+        .then((response) => response.json())
+        .then((categoria) => {
+            document.getElementById('nome').value = categoria.nome
+        })
+
+    document.querySelector('.button').innerHTML = `<button class="btnCadastrar" onclick="editarCategoria(${id})">Editar</button>`;
+}
+
+function editarCategoria(id){
+    const data = {
+        nome: document.getElementById('nome').value
+    }
+    fetch(`https://655f44c1879575426b44f818.mockapi.io/api/categorias/${id}`, {
+        method: 'PUT',
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    alert('Categoria Editada com sucesso!')
+    limparFormulario();
+    listarCategorias();
+    document.querySelector('.button').innerHTML = `<button class="btnCadastrar" onclick="cadastrarCategoria()">Cadastrar</button>`;
+
+}
+
+
 function excluirCategoria(id){
     fetch(`https://655f44c1879575426b44f818.mockapi.io/api/categorias/${id}`, {
         method: 'DELETE',
