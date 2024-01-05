@@ -1,4 +1,9 @@
 listarCategorias();
+function limparFormulario(){
+    const campos = document.querySelectorAll('.form-value')
+    campos.forEach(campo => campo.value = '')
+}
+
 
 function cadastrarCategoria(){
 
@@ -15,6 +20,7 @@ function cadastrarCategoria(){
     })
 
     alert(`Categoria adicionada com sucesso!`)
+    limparFormulario();
     listarCategorias();
 
 }
