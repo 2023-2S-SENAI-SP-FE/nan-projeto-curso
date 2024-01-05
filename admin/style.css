@@ -200,3 +200,18 @@ footer{
     }
     
 }
+
+@media (max-width: 800px){
+    main #stats-content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 460px){
+    main #stats-content {
+        grid-template-columns:1fr;
+    }
+    main #stats-content .stats-box{
+        width: 90%;
+    }
+}
