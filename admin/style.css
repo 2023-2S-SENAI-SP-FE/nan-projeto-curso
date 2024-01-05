@@ -168,6 +168,79 @@ main #stats-content .stats-box p{
     font-weight: 300;
 }
 
+.edit {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btnEdit, .btnExcluir{
+    width: 60px;
+    height: 20px;
+    padding: 2px;
+    background-color: #1FA3B7;
+    color: #FFF;
+    border: 1px solid #e1e1e1;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 500;
+
+}
+
+.btnExcluir{
+    background-color: #F83F3F;
+    margin-right: 10px;
+}
+
+
+#forms{
+    margin: 0 30px;
+    background-color: #FFF;
+    border-left: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 10px 0 10px 20px;
+}
+
+.input-group{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.input-group label{
+    width: 100px;
+    font-weight: 500;
+    color: #555;
+}
+
+.input-group input, .input-group textarea{
+    width: 100%;
+    margin-right: 20px;
+    border: 1px solid #E5E5E5;
+    background-color: #FCFCFC;
+    padding: 6px;
+    color: #666;
+}
+
+.button{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btnCadastrar{
+    width: 140px;
+    height: 30px;
+    background-color: #576CBC;
+    border: 1px solid #E5E5E5;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.btnCadastrar:hover{
+    opacity: 90%;
+}
 
 footer{
     background-color: #FFF;
