@@ -4,7 +4,6 @@ function limparFormulario(){
     campos.forEach(campo => campo.value = '')
 }
 
-
 function cadastrarCategoria(){
 
     const data = {
@@ -36,11 +35,23 @@ function listarCategorias(){
                 <div class="table-data">${categoria[i].id}</div>
                 <div class="table-data">${categoria[i].nome}</div>
                 <div class="table-data edit">
-                    <div class="btnEdit">Editar</div>
-                    <div class="btnExcluir">Excluir</div>
+                    <div class="btn"><button type="button" class="btnEdit" onclick=listarCategoriaId(${categoria[i].id})>Editar</button></div>
+                    <div class="btn"><button type="button" class="btnExcluir" onclick=excluirCategoria(${categoria[i].id})>Excluir</button></div>
                 </div>
             </div>
                 `;
             }
         })
 }
+
+function excluirCategoria(id){
+    fetch(`https://655f44c1879575426b44f818.mockapi.io/api/categorias/${id}`, {
+        method: 'DELETE',
+        headers: {
+            "Content-type": "application/json"
+        },
+    })
+    alert("Categoria excluída com sucesso!")
+    listarCategorias();
+}
+
