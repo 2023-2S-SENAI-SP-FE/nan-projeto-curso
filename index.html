@@ -18,13 +18,9 @@
 <body>
     <div class="cabeca">
             <img src="NaN (1).png" alt="logo"  height="100px" width="100px" class="caixaSombra">
-    <div class="listaDeProdutos">
-        <input id="searchbar" type="text" name="searchbar" placeholder="Pesquisar..." >   
-        <ul class="listaProdutos">
-        <li>listar items</li>
-        <li>listar items</li>
-        <li>listar items</li>
-        <li>listar items</li>
+    <div class="listaDeProdutos" id="listaDeProdutos">
+        <input onkeyup="filtrar()" id="searchbar" type="text" name="searchbar" placeholder="Pesquisa.">   
+        <ul class="listaProdutos" id="listaProdutos">
         </ul>
     </div> 
         <div class="usuario">
@@ -199,6 +195,7 @@
             </div>
             <img  src="cartoes.png" alt="cartoes"> 
         </div>
-    </footer> 
+    </footer>
+    <script src="./pesquisa.js"></script>
 </body>
 </html>

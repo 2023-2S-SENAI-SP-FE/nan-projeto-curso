@@ -78,9 +78,15 @@ input {
     background-color: #eeee;
     width: 592px;
 }
-.listaProdutos li {
+.listaProdutos li a{
+    font-family:'Poppins',sans-serif;
     color: #000;
     margin-left: 10px;
+    padding: 7px;
+    font-size:12pt;
+}
+.listaProdutos li a:hover { 
+    background-color: f6f6f6;
 }
 .login{
     display: flex;
