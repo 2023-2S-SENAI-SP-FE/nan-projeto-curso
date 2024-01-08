@@ -1,14 +1,12 @@
-function Pesquisaprod() {
+function Cadastroclient() {
     
     let opcao;
     let contador;
 
     if (HTMLButtonElement.toString){
 
-        opcao = confirm('Compra Realizada!!');
+        opcao = confirm('Email Cadastrado!!');
 
         contador++;
     }
 }
-
-    

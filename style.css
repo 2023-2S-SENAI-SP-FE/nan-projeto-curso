@@ -1,10 +1,23 @@
+
+ :root {
+    --primeira-cor: #5e5ec0;
+    --segunda-cor: #0B2447;
+    --terceira-cor: #fff;
+    --quarta-cor: #00008b;
+    --quinta-cor: #576cbc33;
+    --fonte-primária: 'Poppins', sans-serif;
+
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: initial;
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--fonte-primária);
     font-size: 12px;
     outline: 0;
 }
@@ -12,15 +25,15 @@
 #searchbar{
     display: flex;
     border-radius: 5px;
-    background-color: #5e5ec0;
-    color: #fff;
+    background-color: var(--primeira-cor);
+    color: var(--terceira-cor);
     height: 30px;
     width: 600px;
     margin-left: 150px;
     border: 0;
     padding-left: 10px;
-    background: url("./buttonsearch.png") no-repeat right  / 1.3em  #5e5ec0;
-    padding-left: 1.3em;
+    background: url("./buttonsearch.png") no-repeat left  / 1.3em  var(--primeira-cor);
+    padding-left: 4em;
 
 }
 input::placeholder{
@@ -33,7 +46,7 @@ input::placeholder{
     align-content: center;
     gap: 20px;
     padding-left: 80px;
-    background-color: rgb(87, 108, 188, 0.2);
+    background-color: var(--quinta-cor);
     
 }
 
@@ -42,7 +55,7 @@ input::placeholder{
 }
 
 .caixaSombra {
-    filter: drop-shadow(4px 4px 4px darkgray);
+    filter: drop-shadow(4px 4px 4px #a9a9a9);
     /* drop-shadow: 5px 10px 2px black; */
 }
 .usuario{
@@ -112,7 +125,7 @@ input::placeholder{
     height: 80px;
     width: 100%;
     padding-top: 10px;
-    background-color: darkblue;
+    background-color: var(--quarta-cor);
     color: #fff;
     text-align: center;
 
@@ -129,7 +142,7 @@ input::placeholder{
 .cadastro button{
     border-radius: 5px;
     color: #fff;
-    background-color: rgb(94, 94, 192);
+    background-color: var(--primeira-cor);
     width: 60px;
     cursor: pointer;
     border: 0;
@@ -153,7 +166,7 @@ input::placeholder{
 nav.menu-lateral{
     width: 250px;
     height: 120vh;
-    background-color:  rgb(87, 108, 188, 0.2);
+    background-color:  var(--quinta-cor);
     column-gap: 70px;
     margin-right: 30px;
     padding-left: 15px;
@@ -162,9 +175,9 @@ nav.menu-lateral{
 }
 
 .EnviaCompra {
-    background-color: rgb(94, 94, 192);
+    background-color: var(--primeira-cor);
     color: #fff;
-    box-shadow: 3px 4px #0B2447;
+    box-shadow: 3px 4px var(--segunda-cor);
     cursor: pointer;
 }
 
@@ -185,7 +198,7 @@ nav.menu-lateral{
 
 
 .produto {
-    background-color: rgb(87, 108, 188, 0.2);
+    background-color: var(--quinta-cor);
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -212,7 +225,7 @@ nav.menu-lateral{
 
 .menu-lateral p{
     font-size: 12px;
-    color: #0B2447;
+    color: var(--segunda-cor);
     padding-left: 20px;
 } 
 summary {
@@ -223,7 +236,7 @@ summary {
 
 .produto strong {
     margin: 10px;
-    color: rgb(94, 94, 192);
+    color: var(--primeira-cor);
     font-weight: bold;
     font-size: 20px;
 }
@@ -277,6 +290,19 @@ header {
     margin: 10px;
 }
 
+.btnoferta {
+
+    box-shadow: 2px 3px #000;
+    cursor: pointer;
+    
+}
+
+.btnoferta:active {
+
+    background-color: var(--segunda-cor);
+    transform: translateY (1.5px);
+
+}
 
 .sub-cadastro button{
     padding: 5px;
