@@ -5,5 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    experimentalRunAllSpecs: true, // roda todos os specs
+    experimentalStudio: true, // habilita o Studio
   },
 });
