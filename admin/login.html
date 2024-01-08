@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - Login</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header-login">
+        <div id="header-title">
+            <h1><a href="#">Administração</a></h1>
+        </div>
+    </header>
+
+    <main>
+        
+        <div id="stats-header">
+            <h2>Login</h2>
+        </div>
+
+        <div id="forms">
+            <div id="msgError"></div>
+
+            <div class="input-group-login">
+                <label for="email" id="emailLabel">E-Mail:</label>
+                <input type="email" class="form-value" name="email" id="email" required>
+            </div>
+
+            <div class="input-group-login">
+                <label for="senha" id="senhaLabel">Senha:</label>
+                <input type="password" class="form-value" name="senha" id="senha" required>
+            </div>
+
+            <div class="button">
+                <div class="btnCadastrar" onclick="login()">Login</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Footer</h4>
+    </footer>
+
+    <script src="./sha256.min.js"></script>
+    <script src="./login.js"></script>
+
+</body>
+</html>
