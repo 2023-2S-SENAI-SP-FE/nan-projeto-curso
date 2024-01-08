@@ -6,9 +6,9 @@ function searchbar() {
         const ul = document.getElementById('listaProdutos');
         json.forEach((item) => {
             const li = document.createElement('li');
-            li.innerHTML=<a href="">
-                <span class="item.nome">${item.nome}</span>
-                </a>;
+            li.innerHTML=`<a href="#">
+                <span class="item-nome">${item.nome}</span>
+                </a>`;
             ul.appendChild(li);
             console.log(ul)
         });
@@ -16,6 +16,7 @@ function searchbar() {
      
 }
 searchbar()
+
 function filtrar() {
     var input,
         filter,
@@ -35,23 +36,32 @@ function filtrar() {
     li = ul.getElementsByTagName("li");
 
     // console.log (li)
-    for(i=0;i,li.length; i++) {
+    for(i=0; i=li.length; i++) {
+
         a =li[i].getElementsByTagName("a")[0];
 
         txtValue = a.textContent || a.innerText;
-        if(txtValue.toUpperCase().indexOf(filter) > -1)
 
-        li[i].style.display = "";
+        if(txtValue.toUpperCase().indexOf(filter) > -1) {
 
-        count++
-
-        span=li[i].querySelector("item.nome");
-        if(span){
-            span.innerHTML = txtValue.replace(new RegExp(filter, "gi"),(match)=> {
-                    return "<strong>" + match + "</strong>";
-            })
+            li[i].style.display = "";
+    
+            count++
+    
+            span=li[i].querySelector(".item-nome");
+            if(span){
+                span.innerHTML = txtValue.replace(new RegExp(filter, "gi"),(match)=> {
+                        return "<strong>" + match + "</strong>";
+                })
+            }
         }else {
-            li[i].style.display="none"
+            li[i].style.display = "none";
         }
+
+    }
+    if (count===0) {
+        ul.style.display="none";
+    }else {
+        ul.style.display="block";
     }
 } 

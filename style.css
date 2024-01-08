@@ -71,6 +71,7 @@ input {
     margin-top: 10px;
 }
 .listaProdutos {
+    display: none;
     position: absolute;
     top: 71px;
     left: 28%;
