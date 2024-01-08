@@ -71,6 +71,6 @@ function logado (){
 
     let usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
     let logado = document.querySelector('#logado');
-    logado.innerHTML = `${usuarioLogado.nome}`;
+    logado.innerHTML = ` ${usuarioLogado.nome}`;
 
 }

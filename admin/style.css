@@ -68,12 +68,35 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
 }
 
 header #header-title h1{
     color: #fff;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+header #header-title a{
+    color: #dfdede;
+}
+
+header #header-title a:hover{
+    text-decoration: underline;
+    color: #FFF;
+}
+
+.strong {
+    font-weight: 700;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header nav ul li{
@@ -99,6 +122,12 @@ main #main-header, main #stats-header, .header-container{
     margin: 20px 30px;
     background-color: #FCFCFC;
     border: 1px solid #E5E5E5;
+}
+
+main {
+    min-height: 84vh;
+    margin-top: 70px;
+    
 }
 
 main #main-header h2, main #stats-header h2, .header-container h2{
@@ -304,17 +333,23 @@ footer{
 @media (max-width: 600px){
     header {
         display: block;
-        height: 80px;
+        height: 68px;
         text-align: center;
     }
     header #header-title{
         padding-top: 6px;
     }
     header nav {
-        margin-top: 12px;
+        margin-top: 6px;
     }
     header nav ul li, header nav ul li:last-child{
         border: none;
+    }
+    #header-login{
+        height: 40px;
+    }
+    main{
+        margin-top: 80px;
     }
     
 }

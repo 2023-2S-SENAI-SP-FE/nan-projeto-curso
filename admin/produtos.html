@@ -14,7 +14,7 @@
 
     <header>
         <div id="header-title">
-            <h1><a href="index.html">Administração</a></h1>
+            <h1>Olá, <span class="strong" id="logado"></span> [<a href="#" onclick="logout()">logout</a>]</h1>
         </div>
         <nav>
             <ul>
@@ -109,6 +109,11 @@
     <footer>
         <h4>Footer</h4>
     </footer>
+    
+    <script src="./login.js"></script>
+    <script>
+        logado();
+    </script>
     <script src="./produtos.js"></script>
 </body>
 </html>
