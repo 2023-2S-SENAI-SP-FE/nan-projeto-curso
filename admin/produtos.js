@@ -52,3 +52,15 @@ function cadastrarProduto(){
 
 }
 
+function excluirProduto(id){
+    fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/${id}`, {
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json"
+        },
+    })
+    alert('Produto excluído com sucesso!');
+    listarProdutos();
+
+}
+
