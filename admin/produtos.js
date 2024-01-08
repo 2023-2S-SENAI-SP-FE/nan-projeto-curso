@@ -28,8 +28,8 @@ function listarProdutos(){
 function cadastrarProduto(){
     const data = {
         nome: document.getElementById('nome').value,
-        valor: document.getElementById('nome').value,
-        descricao: document.getElementById('nome').value,
+        preco: document.getElementById('valor').value,
+        descricao: document.getElementById('descricao').value,
         categoria: document.getElementById('categoria').value,
         img1: document.getElementById('img1').value,
         img2: document.getElementById('img2').value,
@@ -64,3 +64,45 @@ function excluirProduto(id){
 
 }
 
+function listarProdutoId(id){
+    fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/${id}`)
+        .then((response) => response.json())
+        .then((produto) => {
+            document.getElementById('nome').value = produto.nome,
+            document.getElementById('valor').value = produto.preco,
+            document.getElementById('descricao').value = produto.descricao,
+            document.getElementById('categoria').value = produto.categoria,
+            document.getElementById('img1').value = produto.img1,
+            document.getElementById('img2').value = produto.img2,
+            document.getElementById('img3').value = produto.img3
+        })
+
+        document.querySelector('.button').innerHTML = `<button class="btnCadastrar" onclick="editarProduto(${id})">Editar</button>`;
+}
+
+function editarProduto(id){
+    const data ={
+        nome: document.getElementById('nome').value,
+        preco: document.getElementById('valor').value,
+        descricao: document.getElementById('descricao').value,
+        categoria: document.getElementById('categoria').value,
+        img1: document.getElementById('img1').value,
+        img2: document.getElementById('img2').value,
+        img3: document.getElementById('img3').value
+    }
+
+    fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/${id}`,{
+        method: 'PUT',
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+
+    alert('Produto editado com sucesso!');
+    limparFormulario();
+    listarProdutos();
+    document.querySelector('.button').innerHTML = `<button class="btnCadastrar" onclick="cadastrarProduto()">Cadastrar</button>`;
+
+
+}
