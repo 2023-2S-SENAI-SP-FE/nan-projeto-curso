@@ -11,6 +11,51 @@
     color: #fff;
 }
 
+
+/* LOGIN */
+#header-login{
+    justify-content: center;
+}
+
+#header-login #header-title h1{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.input-group-login{
+    margin-right: 20px;
+    color: #555;
+}
+
+.input-group-login label{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.input-group-login input{
+    display: block;
+    width: 100%;
+    border: 1px solid #E5E5E5;
+    background-color: #FCFCFC;
+    padding: 6px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+#msgError{
+    text-align: center;
+    font-size: 12px;
+    color: #FFF;
+    background-color: #FFBBBB;
+    padding: 6px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: none;
+}
+
+
 body {
     background-color: #fff;
 }
