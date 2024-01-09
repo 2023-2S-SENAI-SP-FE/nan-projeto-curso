@@ -12,6 +12,7 @@ function listarPedidos(){
                 document.querySelector('.table-content').innerHTML += `
             <div class="table-row">
                 <div class="table-data">${pedido[i].id}</div>
+                <div class="table-data">${pedido[i].nome_usuario}</div>
                 <div class="table-data">${pedido[i].status}</div>
                 <div class="table-data">R$ ${pedido[i].total.toFixed(2)}</div>
                 <div class="table-data edit">
