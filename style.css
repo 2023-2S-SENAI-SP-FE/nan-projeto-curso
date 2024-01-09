@@ -6,6 +6,10 @@
     font-family: Inter;
   }
 
+button{
+    cursor: pointer;
+}
+
   body{
     width: 100vw;
     height: 100vh;
@@ -123,7 +127,7 @@
     text-align: left;
     color: #576CBC;   
 }
-.paginaProdutoPrincipalRelacionados{
+#paginaProdutoPrincipalRelacionados{
     height: 300px;
     top: 200px;
     left: -194px;
