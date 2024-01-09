@@ -29,16 +29,16 @@ function filtrar() {
         count = 0
 
     input = document.getElementById("searchbar");
-    ul = document.getElementById('listaDeProdutos');
+    ul = document.getElementById('listaProdutos');
 
     filter = input.value.toUpperCase();
 
     li = ul.getElementsByTagName("li");
 
     // console.log (li)
-    for(i=0; i=li.length; i++) {
+    for(i=0; i<li.length; i++) {
 
-        a =li[i].getElementsByTagName("a")[0];
+        a = li[i].getElementsByTagName("a")[0];
 
         txtValue = a.textContent || a.innerText;
 

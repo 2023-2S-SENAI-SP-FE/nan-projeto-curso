@@ -74,10 +74,10 @@ input {
     display: none;
     position: absolute;
     top: 71px;
-    left: 28%;
+    left: 23%;
     z-index: 1;
     background-color: #eeee;
-    width: 592px;
+    width: 600px;
 }
 .listaProdutos li a{
     font-family:'Poppins',sans-serif;
