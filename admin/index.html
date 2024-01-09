@@ -37,19 +37,19 @@
         </div>
         <div id="stats-content">
             <div class="stats-box blue">
-                <h1>15</h1>
+                <h1></h1>
                 <p>Pedidos</p>
             </div>
             <div class="stats-box yellow">
-                <h1>25</h1>
+                <h1></h1>
                 <p>Clientes</p>
             </div>
             <div class="stats-box green">
-                <h1>495</h1>
+                <h1></h1>
                 <p>Produtos</p>
             </div>
             <div class="stats-box red">
-                <h1>22</h1>
+                <h1></h1>
                 <p>Categorias</p>
             </div>           
         </div>
@@ -143,10 +143,15 @@
     <footer>
         <h4>Footer</h4>
     </footer>
+    <script src="./stats.js"></script>
     <script src="./login.js"></script>
     
     <script>
-        logado();
+        logado(); // verifica se o usuário está logado
+        stats('https://65995a81a20d3dc41cef99fb.mockapi.io/pedidos','blue'); // quantidade de clientes
+        stats('https://65995a81a20d3dc41cef99fb.mockapi.io/usuarios','yellow'); // quantidade de clientes
+        stats('https://655f44c1879575426b44f818.mockapi.io/api/produtos','green'); // quantidade de produtos
+        stats('https://655f44c1879575426b44f818.mockapi.io/api/categorias','red'); // quantidade de categorias
     </script>
 </body>
 </html>
