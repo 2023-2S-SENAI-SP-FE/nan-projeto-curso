@@ -18,7 +18,7 @@ function searchbar() {
 searchbar()
 
 function filtrar() {
-    var input,
+    let input,
         filter,
         ul,
         li,
@@ -63,5 +63,9 @@ function filtrar() {
         ul.style.display="none";
     }else {
         ul.style.display="block";
+    }
+
+    if (input.value =="") {
+        ul.style.display="none"
     }
 } 
