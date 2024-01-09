@@ -10,13 +10,15 @@ async function listarUsuarios(){
 }
 function login(){
 
-
+    
+    
     let email = document.querySelector('#email');
     let emailLabel = document.querySelector('#emailLabel');
     let senha = document.querySelector('#senha');
     let senhaLabel = document.querySelector('#senhaLabel');
-
+    
     let msgError = document.querySelector('#msgError');
+    
    
 
     let validaUsuario = {
@@ -54,6 +56,9 @@ function login(){
         msgError.setAttribute('style', 'display: block');
         msgError.innerHTML = 'Usuário ou senha inválida';
         email.focus();
+        setTimeout(function() {
+            msgError.setAttribute('style', 'display: none');
+          }, 2000)
     }
 }
 
