@@ -296,6 +296,10 @@ main #stats-content .stats-box p{
     padding: 10px 0 10px 20px;
 }
 
+#pedido-container{
+    display: none;
+}
+
 .input-group{
     display: flex;
     align-items: center;
