@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - Usuários/Clientes</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div id="header-title">
+            <h1>Olá, <span class="strong" id="logado"></span> [<a href="#" onclick="logout()">logout</a>]</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./categorias.html">Categorias</a></li>
+                <li><a href="./produtos.html">Produtos</a></li>
+                <li><a href="./pedidos.html">Pedidos</a></li>
+                <li><a href="#">Usuários</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="main-header">
+            <h2>Dashboard <span>/ Gerenciar Usuários</span></h2>
+        </div>
+
+        <div id="stats-header">
+            <h2>Adicionar</h2>
+        </div>
+        <div id="forms">
+
+            <div class="input-group">
+                <label for="nome">Nome</label>
+                <input class="form-value"  type="text" name="nome" id="nome">
+            </div> 
+
+            <div class="input-group">
+                <label for="cpf">CPF</label>
+                <input class="form-value"  type="text" name="cpf" id="cpf">
+            </div> 
+
+            <div class="input-group">
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input class="form-value"  type="text" name="dataNascimento" id="dataNascimento">
+            </div> 
+
+            <div class="input-group">
+                <label for="telefone">Telefone</label>
+                <input class="form-value"  type="text" name="telefone" id="telefone">
+            </div> 
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input class="form-value"  type="text" name="email" id="email">
+            </div> 
+
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input class="form-value"  type="password" name="senha" id="senha">
+            </div> 
+
+            <div class="input-group">
+                <label for="cep">CEP</label>
+                <input class="form-value"  type="text" name="cep" id="cep">
+            </div> 
+
+            <div class="input-group">
+                <label for="logradouro">Logradouro</label>
+                <input class="form-value"  type="text" name="logradouro" id="logradouro">
+            </div> 
+
+            <div class="input-group">
+                <label for="numero">Número</label>
+                <input class="form-value"  type="number" name="numero" id="numero">
+            </div> 
+
+            <div class="input-group">
+                <label for="bairro">Bairro</label>
+                <input class="form-value"  type="text" name="bairro" id="bairro">
+            </div> 
+
+            <div class="input-group">
+                <label for="estado">EStado</label>
+                <input class="form-value"  type="text" name="estado" id="estado">
+            </div> 
+
+            <div class="input-group">
+                <label for="cidade">Cidade</label>
+                <input class="form-value"  type="text" name="cidade" id="cidade">
+            </div> 
+
+            <div class="input-group">
+                <label for="nivel">Nivel</label>
+                <input class="form-value"  type="text" name="nivel" id="nivel">
+            </div> 
+
+
+            <div class="button">
+                <button  onclick="cadastrarProduto()" class="btnCadastrar">Cadastrar</button>
+            </div>
+
+        </div>
+
+        <div class="header-container">
+            <h2>Produtos Cadastradas</h2>
+        </div>
+
+        <div class="table-container">
+            <div class="table">
+
+                <div class="table-header">
+                    <div class="header-name">id</div>
+                    <div class="header-name">produto</div>
+                    <div class="header-name">editar / excluir</div>
+                </div>
+
+                <div class="table-content">
+
+                    
+
+                   
+
+                </div>
+
+            </div>
+        </div>
+
+        
+
+    </main>
+
+    <footer>
+        <h4>Footer</h4>
+    </footer>
+    
+    <script src="./login.js"></script>
+    <script>
+        logado();
+    </script>
+    <script src="./usuarios.js"></script>
+</body>
+</html>
