@@ -9,7 +9,6 @@
     font-size: 12px;
     outline: 0;
 }
-
 #searchbar{
     display: flex;
     border-radius: 5px;
@@ -21,6 +20,12 @@
     border: 0;
     padding-left: 10px;
 }
+.listaProdutos li{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
 input::placeholder{
     color: #fff;
 }
