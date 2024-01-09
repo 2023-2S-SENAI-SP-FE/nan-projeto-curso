@@ -1,0 +1,45 @@
+ h2 {
+    font-size: 16px;
+    color: #576CBC;
+    font-weight: 500;
+    margin: 30px 0 10px 0;
+}
+
+input {
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    font-size: 16px;
+    color: #0B2447;
+    font-weight: 300;
+}
+
+input:focus {
+    outline: 0;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+.btnSubmit {
+  background-color: #576CBC;
+  color: #FFF;
+  text-align: center;
+  border: 0;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.button-group {
+  text-align:center;
+}
+
+.check-politica {
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  align-items: center;
+}
+
+.checkbox {
+  margin-top: 10px;
+}
