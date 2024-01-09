@@ -1,6 +1,7 @@
 listarUsuarios();
 
 function listarUsuarios(){
+    document.querySelector('.table-content').innerHTML = '';
     fetch(`https://65995a81a20d3dc41cef99fb.mockapi.io/usuarios`)
         .then((response) => response.json())
         .then((usuario) => {
@@ -18,4 +19,38 @@ function listarUsuarios(){
                 `;
             }
         })
+
+}
+
+function limparFormulario(){
+    const campos = document.querySelectorAll('.form-value')
+    campos.forEach(campo => campo.value = '')
+}
+
+function cadastrarUsuario(){
+    const data = {
+        nome: document.getElementById('nome').value,
+        cpf: document.getElementById('cpf').value,
+        dataNascimento: document.getElementById('dataNascimento').value,
+        telefone: document.getElementById('telefone').value,
+        email: document.getElementById('email').value,
+        senha: sha256(document.getElementById('senha').value),
+        cep: document.getElementById('cep').value,
+        logradouro: document.getElementById('logradouro').value,
+        numero: document.getElementById('numero').value,
+        estado: document.getElementById('estado').value,
+        cidade: document.getElementById('cidade').value,
+        nivel: document.getElementById('nivel').value
+    }
+
+    fetch(`https://65995a81a20d3dc41cef99fb.mockapi.io/usuarios`, {
+        method: 'POST',
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    alert('Usuário Adicionado com Sucesso!');
+    limparFormulario();
+    listarUsuarios();
 }
