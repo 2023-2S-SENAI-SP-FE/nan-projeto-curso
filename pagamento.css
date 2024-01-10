@@ -1,45 +1,217 @@
- h2 {
-    font-size: 16px;
-    color: #576CBC;
-    font-weight: 500;
-    margin: 30px 0 10px 0;
+:root {
+  --cor-primária: #0B2447;
+  --cor-secundária: #19376D;
+  --cor-terciária: #576CBC;
+  --cor-quaternária: #A5D7E8;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  margin: 5px 10px;
+}
+
+h1{
+  font-size: 18px;
+  color: #576CBC;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h2{
+  font-size: 16px;
+  color: #576CBC;
+  font-weight: 500;
+  margin: 30px 0 10px 0;
 }
 
 input {
-    -o-transition: 0.35s ease-in-out;
-    transition: 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
-    font-size: 16px;
-    color: #0B2447;
-    font-weight: 300;
+  width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: #EFF1F9;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  font-size: 16px;
+  color: #0B2447;
+  font-weight: 300;
 }
-
 input:focus {
-    outline: 0;
-    transition: 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
+  outline: 0;
+  border-color: #576CBC;
 }
-
-.btnSubmit {
-  background-color: #576CBC;
-  color: #FFF;
+input:focus + .input-icon i {
+  color: #576CBC;
+}
+input:focus + .input-icon:after {
+  border-right-color: #576CBC;
+}
+.input-group {
+  margin-bottom: 1em;
+  zoom: 1;
+}
+.input-group:before,
+.input-group:after {
+  content: "";
+  display: table;
+}
+.input-group:after {
+  clear: both;
+}
+.input-group-icon {
+  position: relative;
+}
+.input-group-icon input {
+  padding-left: 4.4em;
+}
+.input-group-icon .input-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.4em;
+  height: 3.4em;
+  line-height: 3.4em;
   text-align: center;
-  border: 0;
-  padding: 10px 40px;
-  cursor: pointer;
+  pointer-events: none;
+}
+.input-group-icon .input-icon:after {
+  position: absolute;
+  top: 0.6em;
+  bottom: 1em;
+  left: 3em;
+  display: block;
+  border-right: 1px solid #ccc;
+  content: "";
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.input-group-icon .input-icon i {
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.btnSubmit {
+background-color: #576CBC;
+color: #FFF;
+text-align: center;
+border: 0;
+padding: 10px 40px;
+cursor: pointer;
 }
 
 .button-group {
-  text-align:center;
+text-align:center;
 }
 
-.check-politica {
-  display: flex;
-  font-size: 14px;
-  font-weight: 300;
-  align-items: center;
+.check-politica{
+display: flex;
+font-size: 14px;
+font-weight: 300;
+align-items: center;
 }
 
 .checkbox {
-  margin-top: 10px;
+margin-top: 4px;
+}
+
+.resumo-do-pedido {
+  font-family: 'Poppins';
+  padding: 5px 20px;
+  padding-right: 5px;
+  font-size: 19px;
+  line-height: 2.0;
+  background-color: #EFF1F9;
+  border: 1px solid #CCC;
+  border-radius: 3px 3px 0px 0px;
+  border-bottom: 2px solid rgb(223, 227, 242);
+}
+
+.resumo-do-pedido h3 {
+  font-weight: bold;
+}
+
+.resumo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resumo h6 {
+  text-align: right;
+  font-size: 16px;
+}
+
+.resumo h4 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.pagamento {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins';
+  padding: 20px 10px;
+  padding-right: 5px;
+  font-size: 19px;
+  font-weight: bold;
+  background-color: #EFF1F9;
+  border: 1px solid #CCC;
+  border-radius: 0px 0px 3px 3px;
+  border-top: 2px solid rgb(223, 227, 242);
+}
+
+.pagamento h3 {
+  text-align: right;
+}
+
+#comprar {
+  width: 950px;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 18px;
+  background-color: rgb(94, 94, 192);
+  color: white;
+  border: 0;
+  font-weight: bold;
+}
+
+#voltar {
+  width: 500px;
+  height: 50px;
+  margin-top: 15px;
+  font-size: 18px;
+  background-color: rgb(208, 215, 237);
+  color: rgb(132, 132, 208);
+  border: 0;
+  font-weight: bold;
+}
+
+.entrega {
+  display: flex;
+}
+
+.dados-pagamento {
+  display: flex;
+}
+
+.entrega i {
+  
+}
+
+.dados-pagamento i {
+
 }
