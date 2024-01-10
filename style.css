@@ -105,7 +105,7 @@ input {
     padding-right: 10px;
 }
 
-.carrin-info p{
+.carrin-info p, .sub-cadastro p{
     font-size: 12px;
 }
 
@@ -125,21 +125,14 @@ input {
 }
 
 .cadastro{
-    height: 80px;
-    width: 100%;
-    padding-top: 10px;
-    background-color: darkblue;
-    color: #fff;
+    height: 70px;
+    background-color: #19376dcc;
+    color: #FFF;
+    padding: 5px 0;
+    border-bottom: 5px solid #D9D9D9;
     text-align: center;
-
 }
 
-.sub-cadastro {
-    text-align: center;
-    align-items: center;
-    padding-top: 5px;
-
-}
 
 
 .cadastro button{
@@ -152,12 +145,11 @@ input {
 }
 
 #oferta{
-    background-color: rgb(#fff);
-    border-radius: 5px;
-    width: 340px;
+    background-color: #FFF;
+    border-radius: 6px;
+    width: 260px;
     border: 0;
     margin-top: 5px;
-    border: 0;
     padding: 5px;
     
 }
