@@ -20,14 +20,14 @@
 .informCompra {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 20% 30% 30% 10%;
+    padding: 0px 20px;
 }
 
 .Temas{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
+    font-weight: bold;
 }
 
 .Fundo1{
@@ -37,20 +37,32 @@
 .Status1 {
     color: #fff;
     background-color: rgb(15, 192, 15);
-    padding: 3px 15px;
+    padding: 3px 5px;
     border-radius: 5px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .Status2 {
     color: #fff;
     background-color: rgb(238, 207, 53);
-    padding: 4px 15px;
+    padding: 4px 5px;
     border-radius: 5px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .Status3 {
     color: #fff;
     background-color: red;
-    padding: 3px 15px;
+    padding: 3px 5px;
     border-radius: 5px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -59,7 +71,18 @@ button {
     height: 30px;
     border-radius: 5px;
     padding: 3px 20px;
+    width: 120px;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-top: 15px;
+}
+
+.oculto {
+    background-color: aquamarine;
+}
+
+.oculto:active {
+    visibility: hidden;
+    
 }

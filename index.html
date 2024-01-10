@@ -14,17 +14,18 @@
     <div class="gerenCompras">
 
         <div>
-            <div class="informCompra Fundo1">
+            <div class=" Temas informCompra Fundo1">
                 <p>#</p>
                 <p>Status</p>
                 <p>Total</p> 
+                <p>Gerenciamento</p>
             </div>
         </div>
         <div>
             <div class="informCompra">
                 <p>15</p>
                 <p class="Status1">Concluído</p>
-                <p>Valor$$</p>
+                <span class="Preço"></span>
                 <button onclick="ParteKauan">Detalhes</button>  
             </div>
         </div>
@@ -32,7 +33,7 @@
             <div class="informCompra Fundo1">
                 <p>45</p>
                 <p class="Status2">Pendente</p>
-                <p>Valor$$</p>
+                <span class="Preço"></span>
                 <button onclick="ParteKauan">Detalhes</button>  
             </div>
         </div>
@@ -40,7 +41,7 @@
             <div class="informCompra">
                 <p>49</p>
                 <p class="Status1">Concluído</p>
-                <p>Valor$$</p>  
+                <span class="Preço"></span>  
                 <button onclick="ParteKauan">Detalhes</button>
             </div>
         </div>
@@ -48,13 +49,13 @@
             <div class="informCompra Fundo1">
                 <p>45</p>
                 <p class="Status3">Cancelado</p>
-                <p>Valor$$</p>  
+                <button class="oculto" id="preco" onclick="esconde('conteudo')">Preco <script>valorProduto()</script></button>  
                 <button onclick="ParteKauan">Detalhes</button>
             </div>
         </div>
     </div>
 
-    
+    <script src="valorprodutos.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,21 @@
+    {
+      "id_usuario": 1,
+      "nome_usuario": "João Alves",
+      "produtos": [
+        {
+          "nome": "Roda Aro 17",
+          "valor": 29.99,
+          "quantidade": 4
+        },
+        {
+          "nome": "Volante FIorino 88",
+          "valor": 295.99,
+          "quantidade": 1
+        }
+      ],
+
+      "status": "Entregue",
+      "frete": 19.9,
+      "total": 399.9,
+      "id": "1"
+    }
