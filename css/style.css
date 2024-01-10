@@ -78,9 +78,6 @@ input {
     color: #000;
 }
 
-.usuario, .carrin-info{
-    display: none;
-}
 .usuario strong{
     display: flex;
     font-weight: bold;
@@ -112,11 +109,6 @@ input {
     margin-left: 12px;
     align-items: center;
 }
-
-#btnMenu{
-    font-size: 32px;
-    padding-top: 3px;
-}
 .cadastro{
     height: 70px;
     background-color: #19376DCC;
@@ -132,8 +124,6 @@ input {
 .sub-cadastro p{
     font-size: 12px;
 }
-
-
 
 .cadastro button{
     border-radius: 5px;
@@ -154,7 +144,9 @@ input {
     
 }
 
-
+.aside-menu{
+    width: 250px;
+}
 .menu-lateral{
     height: 100%;
     background-color:  rgb(87, 108, 188, 0.2);
@@ -218,7 +210,7 @@ button {
 
 .produto-conteiner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-left: 20px;
     
 }
@@ -234,7 +226,7 @@ button {
 
 }
 .produto img{
-    max-width: 100%;
+    max-width: 80%;
 }
 
 .produto button {
@@ -283,83 +275,7 @@ header {
 main {
     width: 100%;
     background-color: #edeff5;
+    margin-left: 10px;
 }
 
-.aside-menu{
-    display: none;
-}
-
-.active {
-    display: block;
-    width: 100%;
-    transition: 0.3s ease;
-}
-
-.none{
-    display: none;
-}
-
-#btnClose {
-    display: none;
-    padding-top: 4px;
-}
-
-@media(min-width: 700px) {
-    .produto-conteiner{
-        grid-template-columns: repeat(3,1fr);
-    }
-    .aside-menu{
-        display: block;
-        
-        transition: 0.3s ease;
-    }
-
-    .menu-lateral{
-        width: 250px;
-        margin-right: 10px;
-        transition: 0.3s ease;
-    }
-
-    .produto{
-        width: 85%;
-    }
-    
-    .usuario, .carrin-info{
-        display: block;
-    }
-
-    #btnMenu, #btnClose{
-        display: none;
-    }
-
-}
-
-
-@media(min-width: 1060px) {
-    .produto-conteiner{
-        grid-template-columns: repeat(4,1fr);
-    }
-    .menu-lateral{
-        display: block;
-        
-        transition: 0.3s ease;
-    }
-    .produto{
-        width: 85%;
-    }
-}
-
-@media(min-width: 1400px) {
-    .produto-conteiner{
-        grid-template-columns: repeat(5,1fr);
-    }
-    .menu-lateral{
-        display: block;
-        
-        transition: 0.3s ease;
-    }
-    .produto{
-        width: 85%;
-    }
-}
 
