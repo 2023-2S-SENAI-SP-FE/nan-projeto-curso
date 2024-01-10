@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: initial;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
@@ -28,39 +27,6 @@
 
 input::placeholder{
     color: #fff;
-}
-.cabeca{
-    display: flex;
-    align-items: center;
-    /* justify-content: space-evenly; */
-    align-content: center;
-    gap: 20px;
-    padding-left: 80px;
-    background-color: rgb(87, 108, 188, 0.2);
-    
-}
-
-.cabeca p{
-    color: #000;
-}
-
-.caixaSombra {
-    filter: drop-shadow(4px 4px 4px darkgray);
-    /* drop-shadow: 5px 10px 2px black; */
-}
-.usuario{
-    display: flex;
-    justify-content: center;
-    /* width: 100px; */
-    text-align: center;
-    height: 50px;
-    margin-top: 20px;
-    padding-left: 100px;
-}
-.usuario strong{
-    display: flex;
-    font-weight: bold;
-    position: absolute;
 }
 
 .listaDeProdutos {
@@ -94,52 +60,68 @@ input {
 .listaProdutos li a:hover { 
     background-color: f6f6f6;
 }
-.login{
+.cabeca{
     display: flex;
-    cursor: pointer;
-    justify-content: center;
-    text-align: center;
-    gap: 2px;
-    margin-top: 5px;
-    margin: 20px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #DDE2F1;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid #D9D9D9;
+    
 }
 
-.login p {
+.cabeca img{
+    margin-left: 10px;
+}
+
+.cabeca p{
+    color: #000;
+}
+
+.caixaSombra {
+    filter: drop-shadow(4px 4px 4px darkgray);
+    /* drop-shadow: 5px 10px 2px black; */
+}
+.usuario, .carrin-info{
+    display: none;
+}
+.usuario strong{
+    display: flex;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.login p, .login span {
     font-size: 12px;
 }
 
 .cabeca i{
-    font-size: 25px;
+    font-size: 24px;
+    font-weight: 700;
     cursor: pointer;
+    padding-right: 10px;
 }
 
-.carrin-info{
-    display: flex;
-    justify-content: center;
-    /* width: 100px; */
-    text-align: center;
+.carrin-info p{
+    font-size: 12px;
 }
 
-.carrin-info strong{
-    display: flex;
-    position: absolute;
-    /* top: 65px; */
-    margin: 20px;
-    font-weight: bold;
-    
+.strong {
+    font-weight: 700;
 }
+
 .carrinho{
-    width: 200px;
     display: flex;
-    justify-content: center;
-    /* width: 100px; */
-    text-align: center;
-    gap: 5px;
+    margin-left: 12px;
+    align-items: center;
 }
 
-.carrinho i {
-    font-weight: bold;
-    font-size: 30px;
+#btnMenu{
+    font-size: 32px;
+    padding-top: 3px;
 }
 
 .cadastro{
