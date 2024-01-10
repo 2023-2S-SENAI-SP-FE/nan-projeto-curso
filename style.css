@@ -154,19 +154,55 @@ input {
     
 }
 
-#menu-lateral p{
-    cursor: pointer;
-    margin-left: 20px;
+.menu-lateral{
+    height: 100%;
+    background-color: rgb(87, 108, 188, 0.2);
 }
-nav.menu-lateral{
-    width: 250px;
-    height: 120vh;
-    background-color:  rgb(87, 108, 188, 0.2);
-    column-gap: 70px;
-    margin-right: 30px;
-    padding-left: 15px;
-    padding-top: 10px;
-    line-height: 1.5;
+
+.menu-lateral-categorias{
+    display: flex;
+    background-color: #576CBC;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-lateral-categorias h2, main h1 {
+    font-size: 14px;
+    padding: 10px;
+    color: #FFF;
+}
+
+.menu-lateral-categorias i{
+    font-size: 20px;
+    padding: 10px 8px 10px 10px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.menu-lateral ul li a{
+    display: flex;
+    color: #0B2447;
+    font-size: 12px;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    justify-content: space-between;
+}
+
+.menu-lateral ul li a::after{
+    content: '>'
+}
+
+.menu-lateral ul li a:hover{
+    background-color: #576CBC;
+    color: #FFF;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+main h1{
+    text-align: center;
+    background-color: #576CBC;
 }
 
 button {
