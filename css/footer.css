@@ -3,12 +3,12 @@
     display: flex;
     background-color: #19376DCC;
     column-gap:17%;
+    flex-wrap: wrap;
 
 }
 .containerFooter h2,p,li {
-    font-family:'Poppins', sans-serif;
     color: #fff;
-    font-size: 12pt;
+    font-size: 12px;
 }
 .containerFooter h2 {
     font-weight: 600;
@@ -18,12 +18,11 @@
     line-height: 1.5;
     margin: 0 0 10px 0;
 }
-.containerFooterr p,li {
+.containerFooter p,li {
     font-weight: 200;
 }
 .primeiracoluna {
     padding-left: 7px;
-    display:flex;
     flex-direction: column;
 }
 .primeiracoluna h2, li{
@@ -68,3 +67,4 @@ a:hover{
 li{
     list-style-type: none;
 }
+
