@@ -122,7 +122,6 @@ function idRel(idrelacionado) {
     while(valorid <= 0 ){
         valorid = parseInt(Math.random()  * 20)
     }
-    valorid = 3
     return valorid
 }
 
@@ -140,7 +139,7 @@ function calcularFrete(cep) {
 
 
 document.querySelector('#iniciaPagina').addEventListener('click', () => {
-    dadosProduto(3)
+    dadosProduto(6)
 })
 
 
