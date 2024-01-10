@@ -14,8 +14,7 @@
     background-color: rgb(94, 94, 192);
     color: #fff;
     height: 30px;
-    width: 600px;
-    margin-left: 150px;
+    width: 100%;
     border: 0;
     padding-left: 10px;
 }
@@ -25,17 +24,12 @@
     padding-left: 10px;
 }
 
-input::placeholder{
-    color: #fff;
+#listaDeProdutos{
+    width: 300px;
 }
 
-.listaDeProdutos {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    color:#000;
-
+input::placeholder{
+    color: #fff;
 }
 
 input {
@@ -43,21 +37,18 @@ input {
 }
 .listaProdutos {
     display: none;
-    position: absolute;
-    top: 71px;
-    left: 23%;
     z-index: 1;
     background-color: #eeee;
-    width: 600px;
+    width: 100%;
 }
 .listaProdutos li a{
     color: #000;
     margin-left: 10px;
     padding: 7px;
-    font-size:12pt;
+    font-size:12px;
 }
-.listaProdutos li a:hover { 
-    background-color: f6f6f6;
+.listaProdutos li:hover { 
+    background-color: #f6f6f6;
 }
 .cabeca{
     display: flex;
@@ -179,7 +170,6 @@ input {
 
 main h1{
     text-align: center;
-    
     background-color: #576CBC;
 }
 
@@ -189,8 +179,6 @@ main h1{
     color: #FFF;
     cursor: pointer;
 }
-
-
 
 .menu-lateral ul li a{
     display: flex;
@@ -228,7 +216,6 @@ button {
     padding-left: 20px;
     
 }
-
 
 .produto {
     background-color: rgb(87, 108, 188, 0.2);
@@ -338,6 +325,7 @@ main {
     #btnMenu, #btnClose{
         display: none;
     }
+
 }
 
 
