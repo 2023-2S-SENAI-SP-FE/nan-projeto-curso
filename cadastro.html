@@ -63,7 +63,7 @@
 
         <div class="input-group">
             <div class="input-group-icon">
-                <input type="text" placeholder="Senha" id="senha">
+                <input type="password" name="senha" placeholder="Senha" id="senha">
                 <div class="input-icon">
                     <i class="bx bxs-lock-alt"></i>
                 </div>
@@ -72,7 +72,7 @@
 
         <div class="input-group">
             <div class="input-group-icon">
-                <input type="text" placeholder="Confirmar Senha" id="confirmsenha">
+                <input type="password" name="senhaC" placeholder="Confirmar Senha" id="confirmSenha" onblur="validarSenha()">
                 <div class="input-icon">
                     <i class="bx bxs-lock-alt"></i>
                 </div>
@@ -151,7 +151,7 @@
         
 
     <!-- </div> -->
-    <!-- <script src="./sha256.min.js"></script> -->
+    <script src="./sha256.min.js"></script>
     <script src="./form.js"></script>
    
 </body>

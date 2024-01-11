@@ -1,8 +1,30 @@
-// function limparForm {
-//     const campo = 
-// }
+function validarSenha() {
+    senha=sha256(document.getElementById('senha').value);
+    senhaC=sha256(document.getElementById('confirmSenha').value);
 
-// console.log(sha256('nada')),
+    if (senha!=senhaC) {
+        // senhaC.setCustomValidity
+        console.log("Senha Diferentes")
+        return false;
+
+        }else {
+            return true;
+    }
+
+}
+function teste(){
+    console.log('teste')
+}
+
+
+
+function limparForm(){
+    const campo = document.querySelectorAll('input');
+        campo.forEach(campo => campo.value = '');
+}
+
+
+// console.log(sha256('nada'))
 
 function cadastroUsuario(){
    let usuario = {
@@ -11,7 +33,7 @@ function cadastroUsuario(){
         dataNascimento:document.getElementById('data').value,
         telefone:document.getElementById('telefone').value,
         email:document.getElementById('email').value,
-        senha:document.getElementById('senha').value,
+        senha:sha256(document.getElementById('senha').value),
         confirmsenha:document.getElementById('confirmsenha').value,
         cep:document.getElementById('cep').value,
         logradouro:document.getElementById('log').value,
@@ -33,5 +55,7 @@ fetch ('https://65995a81a20d3dc41cef99fb.mockapi.io/usuarios', {
     body:JSON.stringify(usuario)
         })
             console.log(usuario)
-    
+            limparForm();
 }
+ 
+
