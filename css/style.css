@@ -224,19 +224,26 @@ button {
     display: flex;
     flex-direction: column;
     border-radius: 6px;
-    
 
 }
 
 .divImg{
-align-self: start;
-text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 168px;
+width: 168px;
+background-color: #FFF;
 
 }
 
 
 .produto img{
-    max-width: 80%;
+    width: auto;
+    height: auto;
+    max-width: 168px;
+    max-height: 168px;
+
 }
 
 .produto button {
