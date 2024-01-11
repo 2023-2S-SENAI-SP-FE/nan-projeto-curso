@@ -7,7 +7,7 @@ function listarProduto(){
                 const div = document.createElement('div');
                 div.setAttribute("class", "produto");
                 div.innerHTML = `
-                <img src='${item.img1}'>
+                <div class='divImg'> <img src='${item.img1}'> </div>
                 <p class='tituloProduto'>${item.nome}</p>
                 <strong>R$ ${item.preco}</strong>
                 <p> Em até 6x de R$ ${(item.preco / 6).toFixed(2)}</p>

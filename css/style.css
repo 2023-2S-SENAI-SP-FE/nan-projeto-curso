@@ -51,6 +51,7 @@ input {
 }
 .listaProdutos li:hover { 
     background-color: #f6f6f6;
+    border: 1px solid #0B2447;
 }
 
 .listaProdutos li a:hover{
@@ -212,7 +213,6 @@ button {
 .produto-conteiner {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
-    padding-left: 20px;
     justify-content: center;
     
 }
@@ -224,11 +224,17 @@ button {
     display: flex;
     flex-direction: column;
     border-radius: 6px;
-    justify-content: center;
-    align-items: center;
     
 
 }
+
+.divImg{
+align-self: start;
+text-align: center;
+
+}
+
+
 .produto img{
     max-width: 80%;
 }
