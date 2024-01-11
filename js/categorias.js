@@ -5,7 +5,7 @@ function listarCategorias(){
         .then((categoria) => {
             categoria.forEach(item => {
                 let li = document.createElement('li');
-                li.innerHTML = `<a href='#'>${item.nome}</a>`;
+                li.innerHTML = `<a href='#' onclick="listarProduto('${item.nome}')">${item.nome}</a>`;
                 ulCat.appendChild(li);
             });
         })

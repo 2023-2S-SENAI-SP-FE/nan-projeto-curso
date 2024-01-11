@@ -311,3 +311,24 @@ main {
 }
 
 
+@keyframes load{
+    to{transform: rotate(360deg);}
+}
+
+.preLoad{
+    width: 80px;
+    height: 80px;
+    background-image: url("https://ilustracode.com.br/assets/images/load.png");
+    background-position: center;
+    background-size: contain;
+    animation: load 2s infinite linear;
+}
+
+.boxLoad {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}

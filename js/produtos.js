@@ -1,6 +1,7 @@
-function listarProduto(){
+function listarProduto(categoria){
     let prodCont = document.querySelector('.produto-conteiner');
-    fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/?page=1&limit=15`)
+    prodCont.innerHTML = '';
+    fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/?categoria=${categoria}`)
         .then((response) => response.json())
         .then((produto) => {
             produto.forEach(item => {
