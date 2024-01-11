@@ -65,11 +65,36 @@ button{
 }
 .paginaProdutoPrincipalProdutoMiniaturas figure{
     /* border: 2px solid #000; */
+    width:80px;
+    height:80px;
     background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paginaProdutoPrincipalProdutoMiniaturas img {
+    max-width:80px;
+    max-height:80px;
+    width: auto;
+    height: auto;
 }
 
 .paginaProdutoPrincipalProdutoFoto figure{
+    width:280px;
+    height:280px;
     background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginaProdutoPrincipalProdutoFoto img{
+    max-width:280px;
+    max-height:280px;
+    width: auto;
+    height: auto;
 }
 
 .paginaProdutoPrincipalProdutoDescricao{
@@ -99,7 +124,6 @@ button{
 
 .paginaProdutoPrincipalProdutoDescricao h2{
     width: 298px;
-    height: 24px;
     font-family: Inter;
     font-size: 20px;
     font-weight: 400;
