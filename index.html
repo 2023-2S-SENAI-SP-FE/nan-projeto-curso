@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="valorprodutos.js">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
-
+    <script src="./valorprodutos.js"></script>
 
 </head>
 <body>
@@ -25,7 +26,11 @@
             <div class="informCompra">
                 <p>15</p>
                 <p class="Status1">Concluído</p>
-                <span class="Preço"></span>
+                <div class="preco"> 
+                    <button class="oculto" >Preco</button>
+                </div>
+                <script class="elemento1">valorProduto()</script>
+                
                 <button onclick="ParteKauan">Detalhes</button>  
             </div>
         </div>
@@ -33,7 +38,11 @@
             <div class="informCompra Fundo1">
                 <p>45</p>
                 <p class="Status2">Pendente</p>
-                <span class="Preço"></span>
+                <div class="preco"> 
+                    <button class="oculto" >Preco</button>
+                </div>
+                <script class="elemento1">valorProduto()</script>
+
                 <button onclick="ParteKauan">Detalhes</button>  
             </div>
         </div>
@@ -41,7 +50,11 @@
             <div class="informCompra">
                 <p>49</p>
                 <p class="Status1">Concluído</p>
-                <span class="Preço"></span>  
+                <div class="preco elemento1" > 
+                    <button class="oculto" >Preco</button>
+                </div>
+                <script >valorProduto()</script>
+
                 <button onclick="ParteKauan">Detalhes</button>
             </div>
         </div>
@@ -49,13 +62,15 @@
             <div class="informCompra Fundo1">
                 <p>45</p>
                 <p class="Status3">Cancelado</p>
-                <button class="oculto" id="preco" onclick="esconde('conteudo')">Preco <script>valorProduto()</script></button>  
+                <div class="preco"> 
+                    <button class="oculto" >Preco</button>
+                </div>
+                <script class="elemento1">valorProduto()</script>
+                
                 <button onclick="ParteKauan">Detalhes</button>
             </div>
         </div>
     </div>
-
-    <script src="valorprodutos.js"></script>
     
 </body>
 </html>

@@ -16,6 +16,10 @@
 
       "status": "Entregue",
       "frete": 19.9,
-      "total": 399.9,
+      "total": [
+        {
+          "valor":399.9
+        }
+      ],
       "id": "1"
     }
