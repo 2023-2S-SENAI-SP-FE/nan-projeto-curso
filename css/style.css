@@ -224,6 +224,7 @@ button {
     display: flex;
     flex-direction: column;
     border-radius: 6px;
+    align-items: center;
 
 }
 
@@ -243,6 +244,7 @@ background-color: #FFF;
     height: auto;
     max-width: 168px;
     max-height: 168px;
+    padding: 5px;
 
 }
 
@@ -258,8 +260,9 @@ background-color: #FFF;
 .produto p{
     margin-top: 6px;
     font-size: 14px;
-    color:#0B2447;
+    color: #0B2447;
     font-weight: 300;
+    height: 70px;
 }
 
 
