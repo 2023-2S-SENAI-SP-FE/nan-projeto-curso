@@ -209,9 +209,20 @@ margin-top: 4px;
 }
 
 .entrega i {
-  
+  padding-right: 15px;
+  font-size: 40px;
+  color: #576CBC;
+}
+.entrega h1 {
+  margin-top: 5px;
 }
 
 .dados-pagamento i {
+  padding-right: 15px;
+  font-size: 40px;
+  color: #576CBC;
+}
 
+.dados-pagamento h1 {
+  margin-top: 5px;
 }
