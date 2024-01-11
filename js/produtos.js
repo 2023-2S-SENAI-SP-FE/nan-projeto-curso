@@ -1,7 +1,13 @@
 function listarProduto(categoria){
+    let url;
+    if (categoria != undefined){
+        url = `https://655f44c1879575426b44f818.mockapi.io/api/produtos/?categoria=${categoria}`;
+    }else{
+        url = `https://655f44c1879575426b44f818.mockapi.io/api/produtos/`;
+    }
     let prodCont = document.querySelector('.produto-conteiner');
     prodCont.innerHTML = '';
-    fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/?categoria=${categoria}`)
+    fetch(`${url}`)
         .then((response) => response.json())
         .then((produto) => {
             produto.forEach(item => {
