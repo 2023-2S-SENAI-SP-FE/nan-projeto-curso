@@ -205,13 +205,15 @@ main h1{
 button {
     background-color: rgb(94, 94, 192);
     color: #fff;
+    width: 100%;
 }
 
 
 .produto-conteiner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
     padding-left: 20px;
+    justify-content: center;
     
 }
 
@@ -222,6 +224,8 @@ button {
     display: flex;
     flex-direction: column;
     border-radius: 6px;
+    justify-content: center;
+    align-items: center;
     
 
 }
@@ -236,11 +240,16 @@ button {
     border: 0;
     font-size: 16px;
 }
-.produto p, .menu-lateral p{
-    font-size: 11px;
-    color: #000;
+
+
+.produto p{
+    margin-top: 6px;
+    font-size: 14px;
+    color:#0B2447;
     font-weight: 300;
 }
+
+
 
 .menu-lateral p{
     font-size: 12px;
@@ -253,13 +262,14 @@ button {
     margin: 10px;
     color: rgb(94, 94, 192);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .produtos-menu {
     display: flex;
     align-content: center;
 }
+
 
 
 header {

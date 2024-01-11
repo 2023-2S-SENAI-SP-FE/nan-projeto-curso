@@ -2,7 +2,6 @@ function searchbar() {
     fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/`)
     .then(response => response.json())
     .then((json)=> {
-            (console.log(json));
         const ul = document.getElementById('listaProdutos');
         json.forEach((item) => {
             const li = document.createElement('li');
@@ -10,7 +9,6 @@ function searchbar() {
                 <span class="item-nome">${item.nome}</span>
                 </a>`;
             ul.appendChild(li);
-            console.log(ul)
         });
     })
      
