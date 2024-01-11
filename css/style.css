@@ -211,6 +211,11 @@ main h1{
     cursor: pointer;
 }
 
+button:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
 
 .produto-conteiner {
     display: grid;
@@ -332,3 +337,4 @@ main {
     justify-content: center;
     padding-top: 20px;
 }
+
