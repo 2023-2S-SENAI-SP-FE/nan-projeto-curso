@@ -1,3 +1,5 @@
+dadosProduto(1)
+
 function dadosProduto(id) {
     fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/${id}`, {
         method: 'GET',
@@ -13,12 +15,12 @@ function dadosProduto(id) {
             <section class="paginaProdutoPrincipal">
             <div class="paginaProdutoPrincipalProduto">
                 <div class="paginaProdutoPrincipalProdutoMiniaturas">
-                    <figure><img width="80px" src="${produto.img1}" alt="imagem 1 do  ${produto.nome}"></figure>
-                    <figure><img width="80px" src="${produto.img2}" alt="imagem 2 do  ${produto.nome}"></figure>
-                    <figure><img width="80px" src="${produto.img2}" alt="imagem 3 do  ${produto.nome}"></figure>
+                <!--    <figure><img width="80px" height="80px" src="${produto.img1}" alt="imagem 1 do  ${produto.nome}"></figure> -->
+                    <figure><img src="${produto.img2}" alt="imagem 2 do  ${produto.nome}"></figure>
+                    <figure><img src="${produto.img3}" alt="imagem 3 do  ${produto.nome}"></figure>
                 </div>
                 <div class="paginaProdutoPrincipalProdutoFoto">
-                    <figure><img width="280" src="${produto.img1}" alt="imagem 1 do  ${produto.nome}"></figure>
+                    <figure><img src="${produto.img1}" alt="imagem 1 do  ${produto.nome}"></figure>
                 </div>
                 <div class="paginaProdutoPrincipalProdutoDescricao">
                     <div class="paginaProdutoPrincipalProdutoDescricaoC">
@@ -79,9 +81,11 @@ function dadosProduto(id) {
             `})
 
         .then(respostarelacionado => {
-            for (let index = 1; index <= 3; index++) {
+            id = []
+            for (let index = 0; index <= 2; index++) {
+              id[index] = idRel()
 
-                fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/${idRel(index)}`, {
+                fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/${id[index]}`, {
                     method: 'GET',
                     headers: {
                         'Content-type': 'application/json'
@@ -96,24 +100,47 @@ function dadosProduto(id) {
                         // console.log(produtoRelecionado)
 
                         document.querySelector('#paginaProdutoPrincipalRelacionados').innerHTML += `
-                    <div class="paginaProdutoPrincipalRelacionadosProdutos">
+                    <div class="paginaProdutoPrincipalRelacionadosProdutos" >
                 
-                        <figure><img width="96px" src="${produtoRelecionado.img1}" alt="imagem do  ${produtoRelecionado.nome}"></figure>
+                        <figure><img width="96px" height="96px" src="${produtoRelecionado.img1}" alt="imagem do  ${produtoRelecionado.nome}"></figure>
                         <p> ${produtoRelecionado.nome}</p>
                         <p>R$ ${produtoRelecionado.preco}</p>
-                        <p>Em até R$ ${(produtoRelecionado.preco / 6).toFixed(2)} sem juros </p>
-                        <button type="submit">COMPRAR</button>
+                        <p>Em até 6 x R$ ${(produtoRelecionado.preco / 6).toFixed(2)} sem juros </p>
+                        <button type="submit" id="${id[index]}">COMPRAR</button>
 
                     </div>
                     `})
+                    .then(relCarregado => {
+                        document.getElementById(id[0]).addEventListener('click', () => {
+                            dadosProduto(id[0])
+                        })
+                        document.getElementById(id[1]).addEventListener('click', () => {
+                            dadosProduto(id[1])
+                        })
+                        document.getElementById(id[2]).addEventListener('click', () => {
+                            dadosProduto(id[2])
+                        })
+                    })
             }})
-            .then(frete => {
+            .then(() => {
 
                 document.querySelector('#calcularFrete').addEventListener('click', () => {
-                    calcularFrete(document.querySelector("#CEP").value)
+
+                    document.querySelector('#paginaProdutoAsideInteracaoFrete').innerHTML = `
+                    <!-- <h3>Frete</h3> -->
+                    <input type="text" name="CEP" id="CEP" placeholder="00000000-0">
+                    <button id="calcularFrete">Calcular frete</button>
+                    <p> Freté é R$ ${(calcularFrete(document.querySelector("#CEP").value)).toFixed(2)}</p>
+                    
+                    
+                    `
+                    
                 })
 
+            
+
             })
+
 }
 
 
@@ -126,21 +153,16 @@ function idRel(idrelacionado) {
 }
 
 function calcularFrete(cep) {
+    valorFrete = 0
     valorFrete = (cep * 500) / 899999999
     console.log("Valor frete = " + valorFrete)
 
-    document.querySelector('#paginaProdutoAsideInteracaoFrete').innerHTML += `
-    <p> Freté é R$ ${(valorFrete).toFixed(2)}</p>
-    
-    
-    `
+    return valorFrete
+
+
 }
 
 
-
-document.querySelector('#iniciaPagina').addEventListener('click', () => {
-    dadosProduto(6)
-})
 
 
 
