@@ -203,10 +203,12 @@ main h1{
 }
 
 
-button {
+.btnComprar {
     background-color: rgb(94, 94, 192);
+    margin: 10px;
     color: #fff;
     width: 100%;
+    cursor: pointer;
 }
 
 
@@ -257,15 +259,19 @@ background-color: #FFF;
 }
 
 
-.produto p{
+.tituloProduto, .parcProduto{
     margin-top: 6px;
     font-size: 14px;
     color: #0B2447;
     font-weight: 300;
     height: 70px;
+    display: flex;
+    align-items: center;
 }
 
-
+.parcProduto{
+    height: 20px;
+}
 
 .menu-lateral p{
     font-size: 12px;

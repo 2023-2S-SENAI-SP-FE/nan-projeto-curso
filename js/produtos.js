@@ -10,8 +10,8 @@ function listarProduto(){
                 <div class='divImg'> <img src='${item.img1}'> </div>
                 <p class='tituloProduto'>${item.nome}</p>
                 <strong>R$ ${item.preco}</strong>
-                <p> Em até 6x de R$ ${(item.preco / 6).toFixed(2)}</p>
-                <button type="button"> COMPRAR </button>
+                <p class='parcProduto'> Em até 6x de R$ ${(item.preco / 6).toFixed(2)}</p>
+                <button type="button" class='btnComprar'> COMPRAR </button>
                 `
                 prodCont.appendChild(div);
             });
