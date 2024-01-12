@@ -1,22 +1,40 @@
-function validarSenha() {
-    senha=sha256(document.getElementById('senha').value);
-    senhaC=sha256(document.getElementById('confirmSenha').value);
+function maskCPF(mascara, input){ 
+    const vetMask = mascara.split(""); //transformando mascara em vetor
+    const numCPF = input.value.replace(/\D/g,""); //torca tudo que não dogito por nada
+    const cursor= input.selectionStart //posisção do cursor, armazena o índice do cursor
+    
+ 
+        for(let i=0; i<numCPF.length; i++){
+            vetMask.splice (vetMask.indexOf("_"), 1, numCPF[i]);
+        }
+        input.value= vetMask.join("");
+}
 
-    if (senha!=senhaC) {
-        // senhaC.setCustomValidity
+function error() {
+    // console.log("error");
+    document.getElementById('confirmSenha').classList.remove('confirmsenha');
+
+}
+
+function validarSenha() {
+   const senha=sha256(document.getElementById('senha').value);
+   console.log(senha);
+    const senhaC=sha256(document.getElementById('confirmSenha').value);
+    console.log(senhaC);
+
+    if (senha != senhaC) {
         console.log("Senha Diferentes")
+        document.getElementById('confirmSenha').classList.add('confirmsenha')
         return false;
 
         }else {
+
             return true;
     }
-
 }
 function teste(){
     console.log('teste')
 }
-
-
 
 function limparForm(){
     const campo = document.querySelectorAll('input');
@@ -34,7 +52,6 @@ function cadastroUsuario(){
         telefone:document.getElementById('telefone').value,
         email:document.getElementById('email').value,
         senha:sha256(document.getElementById('senha').value),
-        confirmsenha:document.getElementById('confirmsenha').value,
         cep:document.getElementById('cep').value,
         logradouro:document.getElementById('log').value,
         numero:document.getElementById('numero').value,

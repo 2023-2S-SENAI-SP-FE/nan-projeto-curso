@@ -46,6 +46,11 @@ input {
     color: #0B2447;
     font-weight: 300;
   }
+  .confirmsenha {
+    border: 1px solid red;
+    background-color: red;
+
+  }
   input:focus {
     outline: 0;
     border-color: #576CBC;

@@ -27,7 +27,7 @@
 
         <div class="input-group">
             <div class="input-group-icon">
-                <input type="text" placeholder="CPF" id="cpf">
+                <input type="text" placeholder="CPF" id="cpf" onkeyup="maskCPF('___.___.___-__', this)">
                 <div class="input-icon">
                     <i class="bx bxs-detail"></i>
                 </div>
@@ -36,7 +36,7 @@
 
         <div class="input-group">
             <div class="input-group-icon">
-                <input type="text" placeholder="Data de Nascimento" id="data">
+                <input type="date" placeholder="Data de Nascimento" id="data">
                 <div class="input-icon">
                     <i class="bx bxs-calendar-alt"></i>
                 </div>
@@ -63,7 +63,7 @@
 
         <div class="input-group">
             <div class="input-group-icon">
-                <input type="password" name="senha" placeholder="Senha" id="senha">
+                <input type="password" name="senha" placeholder="Senha" id="senha" onfocus="error()">
                 <div class="input-icon">
                     <i class="bx bxs-lock-alt"></i>
                 </div>
@@ -72,7 +72,7 @@
 
         <div class="input-group">
             <div class="input-group-icon">
-                <input type="password" name="senhaC" placeholder="Confirmar Senha" id="confirmSenha" onblur="validarSenha()">
+                <input type="password" name="senhaC" placeholder="Confirmar Senha" id="confirmSenha" onblur="validarSenha()" onfocus="error()">
                 <div class="input-icon">
                     <i class="bx bxs-lock-alt"></i>
                 </div>
