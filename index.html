@@ -14,18 +14,6 @@
 
 </head>
 <body>
-    <!-- início do preloader -->
-  <div id="preloader">
-    <div class="inner">
-       <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
-       <div class="bolas">
-          <div></div>
-          <div></div>
-          <div></div>                    
-       </div>
-    </div>
-</div>
-<!-- fim do preloader --> 
     <div class="cabeca">
             <img src="./img/logo.png" alt="logo"  height="100px" width="100px" class="caixaSombra">
            
@@ -39,19 +27,10 @@
         </ul>
     </div> 
 
-
-
-
-
-
-
-
-
-
         <div class="usuario">
             <strong>Olá, Usuario</strong>
             <div class="login">
-                <p>Minha Conta <span>| Sair</span></p>
+                <p>Meus Pedidos <span>| Sair</span></p>
                 
             </div>
         </div>
@@ -66,8 +45,8 @@
     <section class="cadastro">
         <div class="sub-cadastro">
             <p>CADASTRE-SE E RECEBA OFERTAS COM PREÇOS EXCLUSIVOS</p>
-            <input id="oferta" type="text" name="oferta" placeholder="nome@email.com">
-            <button type="button" class="btnoferta">OK</button>
+            <input id="oferta" type="email" name="oferta" placeholder="nome@email.com">
+            <button type="button" class="btnoferta" onclick="cadastrarEmail()">OK</button>
         </div>
     </section>
 
@@ -152,6 +131,7 @@
         </div>
     </footer> 
     
+    <script src="./js/mail.js"></script>
     <script src="./js/pesquisa.js"></script>
     <script src="./js/produtos.js"></script>
     <script src="./js/categorias.js"></script>

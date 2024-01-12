@@ -29,7 +29,7 @@
     
 }
 
-input::placeholder{
+#searchbar::placeholder{
     color: #fff;
 }
 
