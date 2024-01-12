@@ -14,10 +14,12 @@
         }
       ],
 
-      "status": "Entregue",
+      
       "frete": 19.9,
       "total": [
         {
+          "quantidadetotal": 5,
+          "status": "Entregue",
           "valor":399.9
         }
       ],

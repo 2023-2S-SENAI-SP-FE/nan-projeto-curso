@@ -1,15 +1,33 @@
 function valorProduto() {
 
-    Totalcompra = document.querySelector(".preco");
+        let Totalquantidade =document.querySelector(".quant");
+        let Statusproduto = document.querySelector(".situacao");
+        let Totalcompra = document.querySelector(".preco");
+
+        fetch ("produtoSite.json").then((response) => {
+            response.json().then((produtoSite) =>{
+                produtoSite.total.map((total) => {
+                    Totalquantidade.innerHTML += `<p class="elemento3"> ${total.quantidadetotal} </p>`
+                    Statusproduto.innerHTML += `<li class="elemento2"> ${total.status} </li>`
+                    Totalcompra.innerHTML += `<li class="elemento1"> ${total.valor} </li>`
+                })
+            })
+        }) 
+
+  
+}
+
+function DetalhesCompra() {
+
+    let MostrainformCompra =document.querySelector(".overlay");
 
     fetch ("produtoSite.json").then((response) => {
         response.json().then((produtoSite) =>{
             produtoSite.total.map((total) => {
-                Totalcompra.innerHTML += `<li class="elemento1"> ${total.valor} </li>`
+                MostrainformCompra.innerHTML += `<li class="detalhesinfo ocultosobrepoe"> ${total.valor} </li>`
             })
         })
-    }) 
-
+    })
+    
 }
-
 
