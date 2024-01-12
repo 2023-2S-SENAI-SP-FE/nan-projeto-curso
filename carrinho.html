@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <title>Carrinho</title>
+    <script async src="carrinho.js"></script>
 </head>
 <body>
     <div class="topo">
@@ -17,20 +18,21 @@
         <div class="alinhamento2">Valor</div>
     </div>
 
-    <div class="produto">
-        <div class="produto-carrinho">
-            <div class="imagem"><img src="kisspng-pump-tap-water-ging-vacuum-5b1e84b62b7c10.0698092615287267101781-removebg-preview.png" alt=""></div>
-            <div class="titulo"><h3>BOMBA D'ÁGUA AUTHOMIX - BA12011</h3><p>Prisma 2000 a 2007</p></div>
-        </div>
-        <div>
-            <input id="Qproduto" type="text" name="Qproduto">
-            <div class="excluir"><a href="">excluir</a></div>
-        </div>
-        <div class="valor">
-            <h3>R$ 1.785,00 no Pix</h3>
-            <h2>ou R$ 1.650,00 no cartão</h2>
-        </div>
-    </div>
+    <table>
+        <tr class="produtoNoCarrinho">
+            <td class="produto-carrinho">
+                <div class="imagem"><img src="kisspng-pump-tap-water-ging-vacuum-5b1e84b62b7c10.0698092615287267101781-removebg-preview.png" alt=""></div>
+                <div class="titulo"><h3>BOMBA D'ÁGUA AUTHOMIX - BA12011</h3><p>Prisma 2000 a 2007</p></div>
+            </td>
+            <td>
+                <input class="Qproduto" type="text" name="Qproduto" value="6">
+                <div class="excluir"><a href="#">excluir</a></div>
+            </td>
+            <td class="valor">
+                <span class="valorProduto">R$1785,00</span>
+            </td>
+        </tr>
+    </table>
 
     <div class="frete">
         <div>
@@ -52,8 +54,8 @@
                 <h4>items (1):</h4>
                 <h4>frete:</h4>
             </div>
-            <div>
-                <h6>R$ 1.785,00</h6>
+            <div class="PrecoTotalCarrinho">
+                <span>R$ 1.785,00</span>
                 <h6>R$ 9,99</h6>
             </div>
         </div>
