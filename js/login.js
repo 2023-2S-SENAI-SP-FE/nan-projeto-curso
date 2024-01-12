@@ -32,9 +32,24 @@ function login(){
     if(email.value == validaUsuario.email && sha256(senha.value) == validaUsuario.senha){
         let token = Math.random().toString(16).substr(2);
         localStorage.setItem('token', token)
-        localStorage.setItem('usuarioLoado', JSON.stringify(validaUsuario))
+        localStorage.setItem('usuarioLogado', JSON.stringify(validaUsuario))
     }else{
         alert('Login ou senha inválida!')
+    }
+
+}
+
+function logado(){
+    let usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+    let logado = document.querySelector('.usuario')
+
+    if (usuarioLogado == null){
+        logado.innerHTML = `<strong> Olá, visitante </strong>
+        <p>Login <span>| Cadastro</span></p>`;
+    }else{
+        logado.innerHTML = `<strong> Olá, ${usuarioLogado.nome} </strong>
+        <p>Meus Pedidos <span>| Sair</span></p>`;
+        
     }
 
 }
