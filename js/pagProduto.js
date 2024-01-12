@@ -8,7 +8,9 @@ function dadosProduto(id) {
         .then(produto => produto.json())
         .then(produto => {
             document.querySelector('.main').innerHTML = `  
-            <div class="produto">
+            <h1>PRODUTOS</h1>
+            <section class="produto-conteiner"></section>
+            <div class="produtoDetalhes">
                 <section class="paginaProdutoPrincipal">
                 <div class="paginaProdutoPrincipalProduto">
                     <div class="paginaProdutoPrincipalProdutoMiniaturas">
@@ -24,55 +26,42 @@ function dadosProduto(id) {
                         <div class="paginaProdutoPrincipalProdutoDescricaoC">
                             <h2>${produto.nome}</h2>
                             <div class="paginaProdutoPrincipalProdutoDescricaoEstrelas">
-                                <figure><img src="./Star 4.png" alt=""></figure>
-                                <figure><img src="./Star 4.png" alt=""></figure>
-                                <figure><img src="./Star 4.png" alt=""></figure>
-                                <figure><img src="./Star 4.png" alt=""></figure>
-                                <figure><img src="./Star 5.png" alt=""></figure>
+                                <figure><img src="../img/Star 4.png" alt=""></figure>
+                                <figure><img src="../img/Star 4.png" alt=""></figure>
+                                <figure><img src="../img/Star 4.png" alt=""></figure>
+                                <figure><img src="../img/Star 4.png" alt=""></figure>
+                                <figure><img src="../img/Star 5.png" alt=""></figure>
                             </div>
                         </div>
+                    
 
-                        <div class="paginaProdutoPrincipalProdutoDescricaoC">
-                            <p>R$ ${produto.preco}</p>
-                            <p>Em até 6x de R$ ${(produto.preco / 6).toFixed(2)} sem juros </p>
-                        </div>
+                        
                         <p> ${produto.descricao}</p>
                     </div>
                 </div>
+            
 
                 <aside class="paginaProdutoAside">
-                <div class="paginaProdutoAsideInteracao">
-                    <form action="" class="paginaProdutoAsideInteracaoComprar">
-                        <p>Status do produto: ${produto.status} </p>
-                        <div>
-                            <label for="quantidadeProduto">Quantidade: </label>
-                            <select name="quantidadeProduto" id="quantidadeProduto">
-                                <option value="1">1</option>
-                                <option value="10">10</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
-                            </select>
+                        <div class="precoProduto"> 
+                            <p class="strong">R$ ${produto.preco}</p> 
+                            <p class="parcelas">Em até 6x de R$ ${(produto.preco / 6).toFixed(2)} sem juros </p>
                         </div>
-                        <button type="submit">COMPRAR</button>
-                        <button type="submit">Adicionar ao carrinho</button>
+                        <button type="submit" class="btnComprarFrete">COMPRAR</button>
                     </form>
 
-                    <div action="" class="paginaProdutoAsideInteracaoFrete" id = "paginaProdutoAsideInteracaoFrete">
-                        <!-- <h3>Frete</h3> -->
-                        <input type="text" name="CEP" id="CEP" placeholder="00000000-0">
-                        <button id="calcularFrete">Calcular frete</button>
-                    </div>
-                </div>
+                    
+
+                        <div class="calculoFrete">
+                            <input type="text" name="CEP" id="CEP" placeholder="00000000-0" class="inputCep">
+                            <button id="calcularFrete" onclick="calcularFrete(06773330)">Calcular frete</button>
+                            <p class="freteValor"></p>
+                        </div>
+                    
             </aside>
             </section>
 
 
-                    <div id="paginaProdutoPrincipalRelacionados"> </div>
-                    <div class="paginaProdutoPrincipalDescricao">
-                        <h3>Descrição do Produto</h3>
-                        <p>${produto.descricao}</p>
-                    </div>
-            
+                   
                </div>
             `})
 
@@ -116,19 +105,6 @@ function dadosProduto(id) {
                         })
                     })
             }})
-            .then(() => {
-
-                document.querySelector('#calcularFrete').addEventListener('click', () => {
-
-                    document.querySelector('#paginaProdutoAsideInteracaoFrete').innerHTML = `
-                    <!-- <h3>Frete</h3> -->
-                    <input type="text" name="CEP" id="CEP" placeholder="00000000-0">
-                    <button id="calcularFrete">Calcular frete</button>
-                    <p> Freté é R$ ${(calcularFrete(document.querySelector("#CEP").value)).toFixed(2)}</p>
-                    
-                    
-                    ` })         
-            })
 }
 
 
@@ -140,11 +116,13 @@ function idRel(idrelacionado) {
     return valorid
 }
 
-function calcularFrete(cep) {
+function calcularFrete() {
     valorFrete = 0
-    valorFrete = (cep * 500) / 899999999
-    // console.log("Valor frete = " + valorFrete)
-    return valorFrete
+    valorFrete = (4970000 * 500) / 899999999;
+
+    document.querySelector('.freteValor').innerHTML = `
+        Frete: R$ ${(valorFrete).toFixed(2)}
+    `
 }
 
 

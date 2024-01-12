@@ -147,6 +147,7 @@ input {
 
 .aside-menu{
     width: 250px;
+    display: none;
 }
 .menu-lateral{
     height: 100%;
@@ -224,7 +225,7 @@ button:hover{
     
 }
 
-.produto {
+.produto, .produtoDetalhes {
     background-color: rgb(87, 108, 188, 0.2);
     margin: 10px;
     padding: 10px;
@@ -323,11 +324,12 @@ main {
     margin: 20px;
     display: flex;
     padding: 10px;
+    
 }
 
 .paginaProdutoPrincipalProduto{
     display: flex;
-    background-color: rgb(87, 108, 188, 0.2);
+    background-color: #eef0f8;
     padding: 12px;
 }
 
@@ -369,6 +371,7 @@ main {
 }
 
 .paginaProdutoPrincipalProdutoDescricaoEstrelas{
+    margin: 1rem 0;
     display: flex;
     flex-direction: row;
 }
@@ -393,23 +396,18 @@ main {
 .paginaProdutoPrincipalProdutoDescricao  p:nth-child(2){
     font-size: 14px;
     font-weight: 300;
-    margin-bottom: 1rem;
     text-align: left;
-    color: #576CBC;   
-}
-
-.paginaProdutoPrincipalProdutoDescricao  p:nth-child(3){
-    color: #000;
+    color: #000;   
 }
 
 #paginaProdutoPrincipalRelacionados{
-    height: 300px;
-    top: 200px;
-    left: -194px;
+    padding: 0 20px;
     border-radius: 6px;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .paginaProdutoPrincipalRelacionadosProdutos{
@@ -461,7 +459,6 @@ main {
     Width: 196px;
     Height: 30px;
     background: #576CBC;
-    font-family: Poppins;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -471,81 +468,29 @@ main {
     border: none;
 }
 
-.paginaProdutoPrincipalDescricao{
-    width: 695px;
-    height: 208px;
-    top: 451px;
-    left: -193px;
-    background: #576CBC1A;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.paginaProdutoPrincipalDescricao h3{
-    width: 280px;
-    height: 35px;
-    top: 463px;
-    left: 15px;
-    font-family: Poppins;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: center;
-}
-
-.paginaProdutoPrincipalDescricao p{
-    width: 663px;
-    height: 145px;
-    top: 498px;
-    left: -178px;
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: left;
-}
 
 .paginaProdutoAside{
     display: flex;
     flex-direction: column;
-    background-color: rgb(87, 108, 188, 0.2);
+    background-color: #eef0f8;
     margin-left: 1rem;
     padding: 10px;
-}
-
-.paginaProdutoAsideInteracao{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.paginaProdutoAsideInteracaoFrete{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    font-size: 14px;
-    font-weight: 300;
-    text-align: left;
+    justify-content: space-between;
 }
 
-.paginaProdutoAsideInteracaoFrete input{
+
+.inputCep{
     width: 160px;
     height: 20px;
     border-radius: 2px;
     border: 1px solid #acb0c2;
 }
 
-.paginaProdutoAsideInteracaoFrete button{
+.btnComprarFrete{
     width: 160px;
     Height: 30px;
     background: #576CBC;
-    font-family: Poppins;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -555,83 +500,33 @@ main {
     border: none;
 }
 
-.paginaProdutoAsideInteracaoFrete h3{
-    width: 280px;
-    height: 35px;
-    top: 463px;
-    left: 15px;
-    font-family: Poppins;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: center;
-}
-
-.paginaProdutoAsideInteracaoComprar{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 130px;
-    font-family: Poppins;
-    font-size: 11px;
-    font-weight: 300;
-    line-height: 17px;
-    letter-spacing: 0em;
-}
-
-.paginaProdutoAsideInteracaoComprar select{
-    border: none;
-    width: 40px;
-    font-family: Poppins;
-    font-size: 11px;
-    font-weight: 300;
-    line-height: 17px;
-    letter-spacing: 0em;
-}
-
-.paginaProdutoAsideInteracaoComprar button{
-    width: 160px;
-    Height: 30px;
-    background: #A5D7E8;
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #576CBC;
-    border: none;
-}
-
-.paginaProdutoAsideInteracaoComprar button:last-child{
+#calcularFrete{
     width: 160px;
     Height: 25px;
     background: #576CBC;
-    font-family: Poppins;
     font-size: 10px;
     font-weight: 400;
-    line-height: 15px;
-    letter-spacing: 0em;
     text-align: center;
     color: #A5D7E8;
     border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    margin-top: 1rem;
 }
 
-
-.paginaProdutoAsideEspaçoVago1{
-    height: 300px;
+.freteValor{
+    margin-top: 1rem;
+    color: #000;
+    font-size: 14px;
 }
 
-.paginaProdutoAsideEspaçoVago2{
-    height: 208px;
+.precoProduto .strong{
+    color: #576CBC;
+    font-weight: 700;
+    font-size: 24px;
 }
 
-
-
+.precoProduto .parcelas{
+    color: #576CBC;
+    font-size: 12px;
+    padding-top: 1rem;
+}
 

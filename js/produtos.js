@@ -23,6 +23,15 @@ function listarProduto(categoria){
                 prodCont.appendChild(div);
             });
         })
+        
+        let produtoDetalhes = document.querySelector('.produtoDetalhes');
+
+        if(produtoDetalhes ==  null){
+            console.log('div n existe')
+        }else{
+            produtoDetalhes.remove();
+        }
+
 }
 
 listarProduto();
