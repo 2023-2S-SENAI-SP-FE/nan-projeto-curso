@@ -226,3 +226,11 @@ margin-top: 4px;
 .dados-pagamento h1 {
   margin-top: 5px;
 }
+
+.input-group-icon label {
+  /* margin-left: 50px; */
+}
+
+#parcelas {
+  margin-left: 10px;
+}
