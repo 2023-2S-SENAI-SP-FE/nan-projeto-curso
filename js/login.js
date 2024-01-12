@@ -33,6 +33,7 @@ function login(){
         let token = Math.random().toString(16).substr(2);
         localStorage.setItem('token', token)
         localStorage.setItem('usuarioLogado', JSON.stringify(validaUsuario))
+        window.location.href = "./index.html";
     }else{
         alert('Login ou senha inválida!')
     }
@@ -45,11 +46,15 @@ function logado(){
 
     if (usuarioLogado == null){
         logado.innerHTML = `<strong> Olá, visitante </strong>
-        <p>Login <span>| Cadastro</span></p>`;
+        <p><a href="./login.html" ">Login</a> <span>| <a href="#">Cadastrar</a></span></p>`;
     }else{
         logado.innerHTML = `<strong> Olá, ${usuarioLogado.nome} </strong>
-        <p>Meus Pedidos <span>| Sair</span></p>`;
+        <p><a href="#" onclick="./meusPedidos.html">Meus Pedidos</a> <span>| <a href="#" onclick="logout()">Sair</a></span></p>`;
         
     }
 
+}
+
+function logout(){
+    console.log('saiu');
 }

@@ -27,7 +27,7 @@ function listarProduto(categoria){
         let produtoDetalhes = document.querySelector('.produtoDetalhes');
 
         if(produtoDetalhes ==  null){
-            console.log('div n existe')
+            
         }else{
             produtoDetalhes.remove();
         }

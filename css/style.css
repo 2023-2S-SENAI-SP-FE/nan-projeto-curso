@@ -5,7 +5,6 @@
     box-sizing: border-box;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
-    font-size: 12px;
     outline: 0;
 }
 #searchbar{
@@ -33,9 +32,6 @@
     color: #fff;
 }
 
-input {
-    margin-top: 10px;
-}
 .listaProdutos {
     display: none;
     position: absolute;
@@ -83,6 +79,13 @@ input {
     display: flex;
     font-weight: bold;
     font-size: 12px;
+}
+
+.usuario p span a,.usuario p a {
+    color: #000;
+}
+.usuario p span a:hover, .usuario p a:hover{
+    color: #576CBC;
 }
 
 
@@ -147,7 +150,6 @@ input {
 
 .aside-menu{
     width: 250px;
-    display: none;
 }
 .menu-lateral{
     height: 100%;
