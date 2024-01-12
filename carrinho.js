@@ -1,10 +1,21 @@
-const RemoverProdutoBotao = document.getElementsByClassName("excluir")
-for(var i = 0; i <RemoverProdutoBotao.length; i++){
-    RemoverProdutoBotao[i].addEventListener("click", function(event) {
-        event.target.parentElement.parentElement.parentElement.remove()
-        atualizarTotal()
-    })
+if(document.readyState =="loading"){
+    document.addEventListener("DOMContentLoaded", ready)
+} else{
+    ready
 }
+
+function ready(){
+    atualizarTotal()
+    const RemoverProdutoBotao = document.getElementsByClassName("excluir")
+    for(var i = 0; i <RemoverProdutoBotao.length; i++){
+        RemoverProdutoBotao[i].addEventListener("click", removerProduto)
+    }
+}
+function removerProduto(event){
+    event.target.parentElement.parentElement.parentElement.remove()
+    atualizarTotal()
+}
+
 function atualizarTotal(){
     let PrecoTotalProdutosCarrinho = 0
     const ProdutosCarrinho = document.getElementsByClassName("produtoNoCarrinho")
