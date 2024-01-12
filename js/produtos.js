@@ -18,7 +18,7 @@ function listarProduto(categoria){
                 <p class='tituloProduto'>${item.nome}</p>
                 <strong>R$ ${item.preco}</strong>
                 <p class='parcProduto'> Em até 6x de R$ ${(item.preco / 6).toFixed(2)}</p>
-                <button type="button" class='btnComprar'> COMPRAR </button>
+                <button type="button" class='btnComprar' onclick='dadosProduto(${item.id})'> COMPRAR </button>
                 `
                 prodCont.appendChild(div);
             });
