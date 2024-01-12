@@ -67,3 +67,8 @@ function filtrar() {
         ul.style.display="none"
     }
 } 
+
+function limparFiltro(){
+    ul = document.getElementById('listaProdutos');
+    ul.style.display = "none";
+}
