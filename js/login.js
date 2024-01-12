@@ -29,4 +29,12 @@ function login(){
         }
     })
 
+    if(email.value == validaUsuario.email && sha256(senha.value) == validaUsuario.senha){
+        let token = Math.random().toString(16).substr(2);
+        localStorage.setItem('token', token)
+        localStorage.setItem('usuarioLoado', JSON.stringify(validaUsuario))
+    }else{
+        alert('Login ou senha inválida!')
+    }
+
 }

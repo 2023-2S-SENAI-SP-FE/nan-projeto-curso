@@ -7,6 +7,33 @@
 </head>
 <body>
 
+    <main>
+        
+        <div id="stats-header">
+            <h2>Login</h2>
+        </div>
+
+        <div id="forms">
+            <div id="msgError"></div>
+
+            <div class="input-group-login">
+                <label for="email" id="emailLabel">E-Mail:</label>
+                <input type="email" class="form-value" name="email" id="email" required>
+            </div>
+
+            <div class="input-group-login">
+                <label for="senha" id="senhaLabel">Senha:</label>
+                <input type="password" class="form-value" name="senha" id="senha" required>
+            </div>
+
+            <div class="button">
+                <button type="submit" class="btnCadastrar" onclick="login()">Login</button>
+            </div>
+
+        </div>
+
+    </main>
+
 
     <script src="./js/sha256.min.js"></script>
     <script src="./js/login.js"></script>
