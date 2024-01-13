@@ -404,17 +404,17 @@ main {
 }
 
 #paginaProdutoPrincipalRelacionados{
-    padding: 0 20px;
     border-radius: 6px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 100%;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
+    padding: 0 10px;
 }
 
 .paginaProdutoPrincipalRelacionadosProdutos{
-    width: 220px;
+    width: 160px;
     height: 300px;
     border-radius: 6px;
     background: #576CBC1A;
@@ -422,12 +422,12 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    font-family: Poppins;
     font-size: 11px;
     font-weight: 300;
-    line-height: 17px;
-    letter-spacing: 0em;
+   
     text-align: center;
+    margin-bottom: 1rem;
+    padding: 10px
 }
 
 .paginaProdutoPrincipalRelacionadosProdutos p:nth-child(2){
@@ -459,13 +459,11 @@ main {
 }
 
 .paginaProdutoPrincipalRelacionadosProdutos button{
-    Width: 196px;
+    width: 100%;
     Height: 30px;
     background: #576CBC;
     font-size: 16px;
     font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0em;
     text-align: center;
     color: #fff;
     border: none;
