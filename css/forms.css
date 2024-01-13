@@ -12,6 +12,7 @@ h1{
     margin-bottom: 20px;
 }
 
+
 .form-container h2{
     font-size: 16px;
     color: #576CBC;
@@ -38,11 +39,7 @@ h1{
     color: #0B2447;
     font-weight: 300;
   }
-  .confirmsenha {
-    border: 1px solid red;
-    background-color: red;
 
-  }
   .form-container input:focus {
     outline: 0;
     border-color: #576CBC;
@@ -128,4 +125,10 @@ h1{
 
 .cadastrar span a:hover{
     color: var(--cor-primária)
+}
+
+ .input-group-icon input.confirmsenha{
+  border: 1px solid red;
+  background-color: red;
+
 }

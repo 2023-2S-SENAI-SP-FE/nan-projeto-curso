@@ -16,6 +16,7 @@
     width: 100%;
     border: 0;
     padding-left: 10px;
+    z-index: 99;
 }
 .listaProdutos li{
     display: flex;
