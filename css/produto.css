@@ -47,6 +47,7 @@
 }
 
 #content .produto-container .produto-content .produto-dados .produto-dados-conteudo h2{
+    max-width: 300px;
     font-size: 20px;
     margin-bottom: 0.5rem;
 }
@@ -133,5 +134,3 @@
     font-size: 14px;
     padding: 10px;
 }
-
-

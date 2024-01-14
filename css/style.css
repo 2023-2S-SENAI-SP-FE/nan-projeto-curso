@@ -151,6 +151,7 @@
 
 .aside-menu{
     width: 250px;
+    
 }
 .menu-lateral{
     height: 100%;
@@ -474,6 +475,7 @@ main {
     text-align: center;
     color: #fff;
     border: none;
+    cursor: pointer;
 }
 
 

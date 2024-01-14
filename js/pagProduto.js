@@ -1,9 +1,11 @@
-function dadosProduto() {
+async function dadosProduto() {
+    let categoria;
     let url_string = window.location.href;
     let id = new URL(url_string).searchParams.get('id')
-    fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/?id=${id}&page=1&limit=1`)
+    await fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/?id=${id}&page=1&limit=1`)
         .then(produto => produto.json())
         .then((produto) => {
+            categoria = produto[0].categoria;
             document.querySelector('.produto-container').innerHTML = 
             `
             <div class="produto-content">
@@ -44,6 +46,25 @@ function dadosProduto() {
             <p>${produto[0].descricao}</p>
             `
         })
+        
+        // produtos relacionados
+
+        fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/?categoria=${categoria}&page=2&limit=4`)
+            .then((relacionados) => relacionados.json())
+            .then((relacionado) => {
+                relacionado.forEach(item => {
+                    document.querySelector('#paginaProdutoPrincipalRelacionados').innerHTML += 
+                    `
+                    <div class="paginaProdutoPrincipalRelacionadosProdutos">
+                        <figure><img width="96px" height="96px" src="${item.img1}" alt="imagem do  ${item.nome}"></figure>
+                        <p> ${item.nome}</p>
+                        <p>R$ ${item.preco}</p>
+                        <p>Em até 6 x R$ ${(item.preco / 6).toFixed(2)} sem juros </p>
+                        <button type="submit" onclick="window.location.href = './produto.html?id=${item.id}'"> COMPRAR </button>
+                    </div>
+                    `
+                });
+            })
         
 }
 
