@@ -82,10 +82,10 @@
     font-size: 12px;
 }
 
-.usuario p span a,.usuario p a {
+.usuario p span a,.usuario p a, .produto p a{
     color: #000;
 }
-.usuario p span a:hover, .usuario p a:hover{
+.usuario p span a:hover, .usuario p a:hover,  .produto p a:hover{
     color: #576CBC;
 }
 
@@ -265,6 +265,13 @@ background-color: #FFF;
     height: 30px;
     border: 0;
     font-size: 16px;
+}
+
+.produto:hover{
+
+    
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+
 }
 
 
@@ -530,4 +537,5 @@ main {
     font-size: 12px;
     padding-top: 1rem;
 }
+
 
