@@ -56,5 +56,7 @@ function logado(){
 }
 
 function logout(){
-    console.log('saiu');
+    localStorage.removeItem('token');
+    localStorage.removeItem('usuarioLogado');
+    window.location.href = './index.html';
 }
