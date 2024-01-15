@@ -12,8 +12,8 @@ function listarUsuarios(){
                 <div class="table-data">${usuario[i].nome}</div>
                 <div class="table-data">${usuario[i].nivel}</div>
                 <div class="table-data edit">
-                    <div class="btn"><button type="button" class="btnEdit" onclick=listarProdutoId(${usuario[i].id})>Editar</button></div>
-                    <div class="btn"><button type="button" class="btnExcluir" onclick=excluirProduto(${usuario[i].id})>Excluir</button></div>
+                    <div class="btn"><button type="button" class="btnEdit" onclick=listarUsuarioId(${usuario[i].id})>Editar</button></div>
+                    <div class="btn"><button type="button" class="btnExcluir" onclick=excluirUsuario(${usuario[i].id})>Excluir</button></div>
                 </div>
             </div>
                 `;
@@ -53,4 +53,16 @@ function cadastrarUsuario(){
     alert('Usuário Adicionado com Sucesso!');
     limparFormulario();
     listarUsuarios();
+}
+
+function excluirUsuario(id){
+    fetch(`https://65995a81a20d3dc41cef99fb.mockapi.io/usuarios/${id}`, {
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json"
+        },
+    })
+    alert('Usuário excluído com sucesso!');
+    listarUsuarios();
+
 }

@@ -313,7 +313,7 @@ main #stats-content .stats-box p{
     color: #555;
 }
 
-.input-group input, .input-group textarea{
+.input-group input, .input-group textarea, .input-group select{
     width: 100%;
     margin-right: 20px;
     border: 1px solid #E5E5E5;

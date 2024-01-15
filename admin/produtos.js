@@ -22,7 +22,25 @@ function listarProdutos(){
             </div>
                 `;
             }
-        })
+        }).then(atualizaCategorias())
+}
+
+function atualizaCategorias(){
+    document.querySelector('#categoria').innerHTML += '';
+    fetch(`https://655f44c1879575426b44f818.mockapi.io/api/categorias`)
+    .then( categorias => categorias.json())
+    .then( categorias => {
+        console.log(categorias)
+        for (const i of categorias) {
+            document.querySelector('#categoria').innerHTML += `
+            <option value="${i.nome}">${i.nome}</option>
+            `
+        }
+    })
+
+
+
+
 }
 
 function cadastrarProduto(){
