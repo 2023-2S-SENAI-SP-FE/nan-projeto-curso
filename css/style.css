@@ -64,6 +64,7 @@
     left: 0;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
     border-bottom: 3px solid #D9D9D9;
+    z-index: 1;
     
 }
 
