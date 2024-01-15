@@ -1,6 +1,9 @@
-var idProduto = parseInt(Math.random()  * 28) // inserir aqui valor do produto escolhido na pagina principal
+var idProduto = parseInt(Math.random()  * 29) // inserir aqui valor do produto escolhido na pagina principal
 var freteFoiCalculado = false;
 var valorDoFrete = 0;
+
+dadosEntrega = localStorage;
+
 dadosProdutos(idProduto)
 
 function dadosProdutos(id) {
@@ -20,13 +23,13 @@ function dadosProdutos(id) {
                 <div class="paginaProdutoPrincipalProduto">
 
                     <div class="paginaProdutoPrincipalProdutoMiniaturas">
-                    <!--    <figure><img width="80px" height="80px" src="${produto.img1}" alt="imagem 1 do  ${produto.nome}"></figure> -->
-                        <figure><img src="${produto.img2}" alt="imagem 2 do  ${produto.nome}"></figure>
-                        <figure><img src="${produto.img3}" alt="imagem 3 do  ${produto.nome}"></figure>
+                        <figure><img src="${produto.img2}" id="imagem2Produto" alt="imagem 1 do  ${produto.nome}"></figure>
+                        <figure><img src="${produto.img3}" id="imagem3Produto" alt="imagem 2 do  ${produto.nome}"></figure>
+                        <figure><img src="${produto.img4}" id="imagem4Produto" alt="imagem 3 do  ${produto.nome}"></figure>
                     </div>
 
                     <div class="paginaProdutoPrincipalProdutoFoto">
-                        <figure><img src="${produto.img1}" alt="imagem 1 do  ${produto.nome}"></figure>
+                        <figure><img src="${produto.img1}" id="imagem1Produto" alt="imagem 1 do  ${produto.nome}"></figure>
                     </div>
 
                     <div class="paginaProdutoPrincipalProdutoDescricao">
@@ -35,11 +38,11 @@ function dadosProdutos(id) {
                             <h2>${produto.nome}</h2>
 
                             <div class="paginaProdutoPrincipalProdutoDescricaoEstrelas">
-                                <figure><img src="./Star 4.png" alt=""></figure>
-                                <figure><img src="./Star 4.png" alt=""></figure>
-                                <figure><img src="./Star 4.png" alt=""></figure>
-                                <figure><img src="./Star 4.png" alt=""></figure>
-                                <figure><img src="./Star 5.png" alt=""></figure>
+                                <figure><img src="./img/Star 4.png" alt=""></figure>
+                                <figure><img src="./img/Star 4.png" alt=""></figure>
+                                <figure><img src="./img/Star 4.png" alt=""></figure>
+                                <figure><img src="./img/Star 4.png" alt=""></figure>
+                                <figure><img src="./img/Star 5.png" alt=""></figure>
                             </div>
 
                         </div>
@@ -100,11 +103,15 @@ function dadosProdutos(id) {
 
         </article>
     `}) //construção da pagina do produtos
+
+    .then(() => {
+
+    })
     .then(() => {
         console.log(freteFoiCalculado)
             if(freteFoiCalculado) {
-                document.querySelector('#resultadoFrete').innerHTML = `<p> Freté é R$ ${valorDoFrete}</p>`    
-            
+                document.querySelector('#resultadoFrete').innerHTML = `<p> Freté é R$ ${localStorage.getItem("FreteCliente")}</p>`
+                document.getElementById('CEP').setAttribute('placeholder', localStorage.getItem("CepCliente"))
             }
 
     })
@@ -148,44 +155,37 @@ function dadosProdutos(id) {
             })
 
             .then(() => {
-                if (idProdutoRelacionado.length >= 3) {
-                    
-                
-                document.getElementById(idProdutoRelacionado[0]).addEventListener('click', () => {
-                    dadosProdutos(idProdutoRelacionado[0])
-                })
-                document.getElementById(idProdutoRelacionado[1]).addEventListener('click', () => {
-                    dadosProdutos(idProdutoRelacionado[1])
-                })
-                document.getElementById(idProdutoRelacionado[2]).addEventListener('click', () => {
-                    dadosProdutos(idProdutoRelacionado[2])
-                })
-            }
+                if (idProdutoRelacionado.length >= 3) {     
+                    document.getElementById(idProdutoRelacionado[0]).addEventListener('click', () => {
+                        dadosProdutos(idProdutoRelacionado[0])
+                    })
+                    document.getElementById(idProdutoRelacionado[1]).addEventListener('click', () => {
+                        dadosProdutos(idProdutoRelacionado[1])
+                    })
+                    document.getElementById(idProdutoRelacionado[2]).addEventListener('click', () => {
+                        dadosProdutos(idProdutoRelacionado[2])
+                    })
+                }
         
             }) 
-
         } //fim laço for
     })   
   
-    .then(() => {
-            
+    .then(() => {    
         document.querySelector('#calcularFrete').addEventListener('click', () => {
+            localStorage.setItem("CepCliente", document.querySelector("#CEP").value)
             valorDoFrete = calcularFrete(document.querySelector("#CEP").value).toFixed(2)
-            document.querySelector('#resultadoFrete').innerHTML = `
-            <p> Freté é R$ ${valorDoFrete}</p>      
-            `})  
-        }
-    ) 
-
-
+            localStorage.setItem("FreteCliente", valorDoFrete)
+            document.querySelector('#resultadoFrete').innerHTML = `<p> Freté é R$ ${valorDoFrete}</p>`  
+        })  
+    })
 }
-
 
 function idRel() {
     valorid = 0;
 
     while(valorid <= 0){
-        valorid = parseInt(Math.random()  * 20)
+        valorid = parseInt(Math.random()  * 29)
     }
 
     return valorid
@@ -194,7 +194,7 @@ function idRel() {
 function calcularFrete(cep) {
     valorFrete = 0
     valorFrete = (cep * 500) / 899999999
-    // console.log("Valor frete = " + valorFrete)
     freteFoiCalculado = true
+
     return valorFrete
 }
