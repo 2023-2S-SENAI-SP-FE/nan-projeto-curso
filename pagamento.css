@@ -232,5 +232,25 @@ margin-top: 4px;
 }
 
 #parcelas {
-  margin-left: 10px;
+  width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: #EFF1F9;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  font-size: 16px;
+  color: #0B2447;
+  font-weight: 300;
+}
+
+#parcelas-titulo {
+  color: #576CBC;
+  font-size: 20px;
+  font-weight: bold;
+  
 }
