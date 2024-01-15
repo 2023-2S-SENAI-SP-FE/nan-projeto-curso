@@ -24,3 +24,15 @@ function listarPedidos(){
             }
         })
 }
+
+function excluirUsuario(id){
+    fetch(`https://65995a81a20d3dc41cef99fb.mockapi.io/pedidos/${id}`, {
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json"
+        },
+    })
+    alert('Pedido excluído com sucesso!');
+    lisarPedidos();
+
+}
