@@ -16,8 +16,8 @@
 
 #content .produto-container .produto-content .produto-thumbs {
     display: flex;
-    margin-left: 1rem;
     flex-direction: column;
+    margin-left: 1rem;
 }
 
 #content .produto-container .produto-content .produto-thumbs img{
@@ -133,4 +133,11 @@
     font-weight: 300;
     font-size: 14px;
     padding: 10px;
+}
+
+
+@media (max-width: 1080px){
+    .produto-thumbs img{
+        display: none;
+    }
 }
