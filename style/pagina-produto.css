@@ -185,6 +185,7 @@ button{
     line-height: 17px;
     letter-spacing: 0em;
     color: #0B2447; 
+    height: 30px;
 }
 
 .paginaProdutoPrincipalRelacionadosProdutos p:nth-child(3){
