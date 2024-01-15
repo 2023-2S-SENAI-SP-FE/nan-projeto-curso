@@ -579,3 +579,8 @@ main {
     }
 }
 
+@media (max-width: 700px){
+    #searchbar {
+        width: 200px;
+    }
+}

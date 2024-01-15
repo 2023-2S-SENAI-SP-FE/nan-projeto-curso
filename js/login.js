@@ -36,6 +36,7 @@ function login(){
         window.location.href = "./index.html";
     }else{
         alert('Login ou senha inválida!')
+        document.getElementById('email').focus();
     }
 
 }
