@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - Produtos</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div id="header-title">
+            <h1><span> <a href="./index.html"><i class="bx bxs-home"></i></a> </span>Olá, <span class="strong" id="logado"></span>  [<a href="#" onclick="logout()">logout</a>]</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./categorias.html">Categorias</a></li>
+                <li><a href="./produtos.html">Produtos</a></li>
+                <li><a href="./pedidos.html">Pedidos</a></li>
+                <li><a href="./usuarios.html">Usuários</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="main-header">
+            <h2>Dashboard <span>/ Gerenciar Produtos</span></h2>
+        </div>
+
+        <div id="stats-header">
+            <h2>Adicionar Produto</h2>
+        </div>
+        <div id="forms">
+
+            <div class="input-group">
+                <label for="nome">Nome</label>
+                <input class="form-value"  type="text" name="nome" id="nome">
+            </div> 
+
+            <div class="input-group">
+                <label for="valor">Valor</label>
+                <input class="form-value"  type="text" name="valor" id="valor">
+            </div> 
+
+            <div class="input-group">
+                <label for="descricao">Descrição</label>
+                <textarea class="form-value" name="descricao" id="descricao" cols="30" rows="3"></textarea>
+            </div> 
+
+            <div class="input-group">
+                <label for="categoria">Categoria</label>
+                <select name="categoria" id="categoria">
+                    
+                  </select>
+            </div> 
+
+            <div class="input-group">
+                <label for="img1">Imagem 1</label>
+                <input class="form-value"  type="text" name="img1" id="img1">
+            </div> 
+
+            <div class="input-group">
+                <label for="img2">Imagem 2</label>
+                <input class="form-value"  type="text" name="img2" id="img2">
+            </div> 
+
+            <div class="input-group">
+                <label for="img3">Imagem 3</label>
+                <input class="form-value"  type="text" name="img3" id="img3">
+            </div> 
+
+            <div class="button">
+                <button  onclick="cadastrarProduto()" class="btnCadastrar">Cadastrar</button>
+            </div>
+
+        </div>
+
+        <div class="header-container">
+            <h2>Produtos Cadastradas</h2>
+        </div>
+
+        <div class="table-container">
+            <div class="table">
+
+                <div class="table-header">
+                    <div class="header-name">id</div>
+                    <div class="header-name">produto</div>
+                    <div class="header-name">editar / excluir</div>
+                </div>
+
+                <div class="table-content">
+
+                    
+
+                   
+
+                </div>
+
+            </div>
+        </div>
+
+        
+
+    </main>
+
+    <footer>
+        <h4>Administração - NAN Autopeças</h4>
+    </footer>
+    
+    <script src="./js/login.js"></script>
+    <script>
+        logado();
+    </script>
+    <script src="./js/produtos.js"></script>
+</body>
+</html>
