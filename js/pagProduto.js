@@ -1,4 +1,5 @@
-var idProduto = parseInt(Math.random()  * 29) // inserir aqui valor do produto escolhido na pagina principal
+let url_string = window.location.href;
+var idProduto = new URL(url_string).searchParams.get('id') // inserir aqui valor do produto escolhido na pagina principal
 var freteFoiCalculado = false;
 var valorDoFrete = 0;
 
@@ -7,6 +8,7 @@ dadosEntrega = localStorage;
 dadosProdutos(idProduto)
 
 function dadosProdutos(id) {
+    console.log(id)
     
     fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/${id}`, {
         method: 'GET',
