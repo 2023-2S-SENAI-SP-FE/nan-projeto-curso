@@ -198,3 +198,5 @@ function calcularFrete(cep) {
 
     return valorFrete
 }
+
+export {dadosProdutos}
