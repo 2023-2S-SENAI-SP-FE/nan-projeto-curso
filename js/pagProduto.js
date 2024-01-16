@@ -187,7 +187,7 @@ function idRel() {
     valorid = 0;
 
     while(valorid <= 0){
-        valorid = parseInt(Math.random()  * 29)
+        valorid = parseInt(Math.random()  * 100)
     }
 
     return valorid
