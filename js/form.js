@@ -80,7 +80,7 @@ fetch ('https://65995a81a20d3dc41cef99fb.mockapi.io/usuarios', {
     },
     body:JSON.stringify(usuario)
         })
-            console.log(usuario)
+            alert('Cadastro realizado com Sucesso');
             limparForm();
 }
  
