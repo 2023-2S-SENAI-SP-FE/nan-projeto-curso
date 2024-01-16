@@ -52,6 +52,7 @@ function cadastrarProduto(){
         img1: document.getElementById('img1').value,
         img2: document.getElementById('img2').value,
         img3: document.getElementById('img3').value,
+        img4: document.getElementById('img4').value,
         avaliacao: 0,
         status: 'disponível'
     }
@@ -92,7 +93,8 @@ function listarProdutoId(id){
             document.getElementById('categoria').value = produto.categoria,
             document.getElementById('img1').value = produto.img1,
             document.getElementById('img2').value = produto.img2,
-            document.getElementById('img3').value = produto.img3
+            document.getElementById('img3').value = produto.img3,
+            document.getElementById('img4').value = produto.img4
         })
 
         document.querySelector('.button').innerHTML = `<button class="btnCadastrar" onclick="editarProduto(${id})">Editar</button>`;
@@ -106,7 +108,8 @@ function editarProduto(id){
         categoria: document.getElementById('categoria').value,
         img1: document.getElementById('img1').value,
         img2: document.getElementById('img2').value,
-        img3: document.getElementById('img3').value
+        img3: document.getElementById('img3').value,
+        img3: document.getElementById('img4').value
     }
 
     fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/${id}`,{
