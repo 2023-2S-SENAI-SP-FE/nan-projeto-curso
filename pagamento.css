@@ -50,6 +50,12 @@ input:focus {
   outline: 0;
   border-color: #576CBC;
 }
+
+select#parcelas:focus {
+  border-color: #576CBC;
+  outline: 0;
+}
+
 input:focus + .input-icon i {
   color: #576CBC;
 }
@@ -118,21 +124,9 @@ cursor: pointer;
 text-align:center;
 }
 
-.check-politica{
-display: flex;
-font-size: 14px;
-font-weight: 300;
-align-items: center;
-}
-
-.checkbox {
-margin-top: 4px;
-}
-
 .resumo-do-pedido {
   font-family: 'Poppins';
-  padding: 5px 20px;
-  padding-right: 5px;
+  padding: 10px 10px;
   font-size: 19px;
   line-height: 2.0;
   background-color: #EFF1F9;
@@ -151,8 +145,8 @@ margin-top: 4px;
 }
 
 .resumo h6 {
+  font-size: 18px;
   text-align: right;
-  font-size: 16px;
 }
 
 .resumo h4 {
@@ -165,7 +159,6 @@ margin-top: 4px;
   justify-content: space-between;
   font-family: 'Poppins';
   padding: 20px 10px;
-  padding-right: 5px;
   font-size: 19px;
   font-weight: bold;
   background-color: #EFF1F9;
@@ -179,8 +172,8 @@ margin-top: 4px;
 }
 
 #comprar {
-  width: 950px;
-  height: 50px;
+  width: 385%;
+  height: 40px;
   margin-top: 20px;
   font-size: 18px;
   background-color: rgb(94, 94, 192);
@@ -190,8 +183,8 @@ margin-top: 4px;
 }
 
 #voltar {
-  width: 500px;
-  height: 50px;
+  width: 160px;
+  height: 40px;
   margin-top: 15px;
   font-size: 18px;
   background-color: rgb(208, 215, 237);
@@ -252,5 +245,9 @@ margin-top: 4px;
   color: #576CBC;
   font-size: 20px;
   font-weight: bold;
-  
+}
+
+.pagamento {
+  display: flex;
+  align-items: center;
 }
