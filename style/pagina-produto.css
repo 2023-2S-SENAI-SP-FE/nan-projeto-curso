@@ -1,0 +1,393 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Rubik+Doodle+Shadow&display=swap');
+
+
+:root{
+    font-family: Inter;
+  }
+
+button{
+    cursor: pointer;
+}
+
+  body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+  }
+
+.paginaProdutoOculto{
+    display: none;
+}
+
+.paginaProduto{
+    width: 930px;
+    height: 1068px;
+    top: -178px;
+    left: -219px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.paginaProdutoPrincipal{
+    width: 695px;
+    height: 1068px;
+    top: -94px;
+    left: -193px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.paginaProdutoPrincipalProduto{
+    width: 695px;
+    Height: 350px;
+    top: -94px;
+    left: -193px;
+    background: #576CBC1A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.paginaProdutoPrincipalProdutoMiniaturas{
+    height: 85%;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.paginaProdutoPrincipalProdutoMiniaturas figure{
+    /* border: 2px solid #000; */
+    width:80px;
+    height:80px;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paginaProdutoPrincipalProdutoMiniaturas img {
+    max-width:80px;
+    max-height:80px;
+    width: auto;
+    height: auto;
+}
+
+.paginaProdutoPrincipalProdutoFoto figure{
+    width:280px;
+    height:280px;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginaProdutoPrincipalProdutoFoto img{
+    max-width:280px;
+    max-height:280px;
+    width: auto;
+    height: auto;
+}
+
+.paginaProdutoPrincipalProdutoDescricao{
+    width: 300px;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.paginaProdutoPrincipalProdutoDescricaoEstrelas{
+    display: flex;
+    flex-direction: row;
+}
+
+.paginaProdutoPrincipalProdutoDescricao div{
+    margin-bottom: 20px;
+}
+
+.paginaProdutoPrincipalProdutoDescricao h2{
+    width: 298px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.paginaProdutoPrincipalProdutoDescricao p:nth-child(1){
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #576CBC;
+}
+
+.paginaProdutoPrincipalProdutoDescricao  p:nth-child(2){
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #576CBC;   
+}
+#paginaProdutoPrincipalRelacionados{
+    height: 300px;
+    top: 200px;
+    left: -194px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.paginaProdutoPrincipalRelacionadosProdutos{
+    width: 220px;
+    height: 300px;
+    border-radius: 6px;
+    background: #576CBC1A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.paginaProdutoPrincipalRelacionadosProdutos p:nth-child(2){
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0em;
+    color: #0B2447; 
+    height: 30px;
+}
+
+.paginaProdutoPrincipalRelacionadosProdutos p:nth-child(3){
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: #576CBC; 
+}
+
+.paginaProdutoPrincipalRelacionadosProdutos p:nth-child(4){
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #576CBC; 
+}
+
+.paginaProdutoPrincipalRelacionadosProdutos button{
+    Width: 196px;
+    Height: 30px;
+    background: #576CBC;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    border: none;
+}
+
+.paginaProdutoPrincipalDescricao{
+    width: 695px;
+    height: 208px;
+    top: 451px;
+    left: -193px;
+    background: #576CBC1A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.paginaProdutoPrincipalDescricao h3{
+    width: 280px;
+    height: 35px;
+    top: 463px;
+    left: 15px;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.paginaProdutoPrincipalDescricao p{
+    width: 663px;
+    height: 145px;
+    top: 498px;
+    left: -178px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.paginaProdutoAside{
+    width: 180px;
+    top: -94px;
+    left: 519px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.paginaProdutoAsideInteracao{
+    height: 344px;
+    top: -94px;
+    left: 519px;
+    border: 3px solid #EFF1F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.paginaProdutoAsideInteracaoFrete{
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.paginaProdutoAsideInteracaoFrete input{
+    width: 160px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid #acb0c2;
+}
+
+.paginaProdutoAsideInteracaoFrete button{
+    width: 160px;
+    Height: 30px;
+    background: #576CBC;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    border: none;
+}
+
+.paginaProdutoAsideInteracaoFrete h3{
+    width: 280px;
+    height: 35px;
+    top: 463px;
+    left: 15px;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.paginaProdutoAsideInteracaoComprar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 130px;
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0em;
+}
+
+.paginaProdutoAsideInteracaoComprar select{
+    border: none;
+    width: 40px;
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0em;
+}
+
+.paginaProdutoAsideInteracaoComprar button{
+    width: 160px;
+    Height: 30px;
+    background: #A5D7E8;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #576CBC;
+    border: none;
+}
+
+.paginaProdutoAsideInteracaoComprar button:last-child{
+    width: 160px;
+    Height: 25px;
+    background: #576CBC;
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #A5D7E8;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.paginaProdutoAsideEspaçoVago1{
+    height: 300px;
+}
+
+.paginaProdutoAsideEspaçoVago2{
+    height: 208px;
+}
+
+
