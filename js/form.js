@@ -1,13 +1,22 @@
 function maskCPF(mascara, input){ 
     const vetMask = mascara.split(""); //transformando mascara em vetor
-    const numCPF = input.value.replace(/\D/g,""); //torca tudo que não dogito por nada
-    const cursor= input.selectionStart //posisção do cursor, armazena o índice do cursor
+    const numCPF = input.value.replace(/\D/g,""); //troca tudo que não digito por nada
+    // const cursor= input.selectionStart //posisção do cursor, armazena o índice do cursor
     
  
         for(let i=0; i<numCPF.length; i++){
             vetMask.splice (vetMask.indexOf("_"), 1, numCPF[i]);
         }
         input.value= vetMask.join("");
+}
+
+function phone(masc, input){
+    const vetphone = masc.split("");
+    const phone =  input.value.replace(/\D/g,"");
+        for (let i = 0; i < phone.length; i++) {
+            vetphone.splice(vetphone.indexOf("X"), 1, phone[i]);
+        }
+        input.value = vetphone.join("");
 }
 
 function error() {
