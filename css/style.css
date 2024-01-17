@@ -115,6 +115,15 @@
     margin-left: 12px;
     align-items: center;
 }
+
+.carrinho a{
+    color: #000;
+
+}
+
+.carrinho a:hover {
+    color: #576CBC;
+}
 .cadastro{
     height: 70px;
     background-color: #19376DCC;

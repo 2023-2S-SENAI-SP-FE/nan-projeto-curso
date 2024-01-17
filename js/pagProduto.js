@@ -34,7 +34,7 @@ async function dadosProduto() {
                                     <input type="text" id="input-frete">
                                     <button type="button" class="btnCalcularFrete">Calcular Frete</button>
                                     <div class="divComprar">
-                                        <button type="button" class="btnFreteComprar">COMPRAR</button>
+                                        <button type="button" class="btnFreteComprar" onclick="adicionarItem(${produto[0].id})">COMPRAR</button>
                                     </div>
                                 </div>
                             </div>

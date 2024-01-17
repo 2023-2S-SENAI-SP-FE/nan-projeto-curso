@@ -6,6 +6,7 @@
     <title>NotANumber</title>
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/carrinho.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"> 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">    
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,16 +71,66 @@
             </nav>
         </aside>
                 <main class="main">
-                    <section class="produto-conteiner">
+                    <div class="topo">
+                        <div>Produto</div>
+                        <div class="right">Valor</div>
+                    </div>
+                
+                    <div class="produtosCarrinho">
+                
                         <!-- <div class="produto">
-                            <img src="./img/kisspng-pump-tap-water-ging-vacuum-5b1e84b62b7c10.0698092615287267101781-removebg-preview.png"  alt="Bomba Imagem">
-                            <p>Bomba d'água volvo 3.0/ 3.2 24v. S60/ S80/ V60/ XC60/ XC70</p>
-                            <strong>R$ 476,25</strong>
-                            <p>Em até 6x de R$ 76,35 sem juros</p>
-                            <button type="button">COMPRAR</button>
+                            <div class="produto-carrinho">
+                                <div class="titulo"><h3>BOMBA D'ÁGUA AUTHOMIX - BA12011</h3><p>Prisma 2000 a 2007</p></div>
+                            </div>
+                            <div>
+                                <input id="Qproduto" type="text" name="Qproduto">
+                                <div class="excluir"><a href="">excluir</a></div>
+                            </div>
+                            <div class="valor">
+                                <h3>R$ 1.785,00 no Pix</h3>
+                                <h2>ou R$ 1.650,00 no cartão</h2>
+                            </div>
                         </div> -->
-                       
-                    </section>
+                
+                    </div>
+                        
+                    <!-- <div class="frete">
+                        <div>
+                            <h3 class="descFrete">Frete para 12345-000</h3>
+                            <h3 class="descFrete">Rua nanana-São Paulo/SP</h3>
+                        </div>
+                        <div>
+                            <p>R$ 9,99</p>
+                        </div>
+                    </div> -->
+                
+                    <div class="resumo-do-pedido">
+                        <div>
+                            <h3>Resumo do pedido</h3>
+                        </div>
+                        
+                        <div class="resumo">
+                            <!-- <div>
+                                <h4>items (1):</h4>
+                                <h4>frete:</h4>
+                            </div>
+                            <div>
+                                <h6>R$ 1.785,00</h6>
+                                <h6>R$ 9,99</h6>
+                            </div> -->
+                        </div>
+                    </div>
+                
+                    <div class="pagamento">
+                        <div class="btnPagar">
+                            <p>Total:</p>
+                            <button id="pagar" type="submit" onclick="window.location.href = 'pagamento.html'">IR PARA O PAGAMENTO</button>
+                        </div>
+                        <div class="btnLimpar">
+                            <!-- <h3>R$ 1.794,99</h3>
+                            <button id="esvaziar" type="reset">LIMPAR CARRINHO</button> -->
+                        </div>
+                    </div>
                 </main>
     </div>
     <footer>
