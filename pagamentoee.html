@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pagamento.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <title>Pagamento</title>
+</head>
+<body>
+    <div class="entrega">
+        <i class='bx bx-package'></i>
+        <h1>DADOS PARA ENTREGA</h1>
+    </div>
+
+    
+    <div class="form-container">
+
+        <div class="input-group">
+            <div class="input-group-icon">
+                <input type="text" placeholder="Nome Completo">
+                <div class="input-icon">
+                    <i class="bx bxs-user"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-icon">
+                <input type="text" name="cep" id="cep"  onblur="pesquisacep(this.value);" placeholder="CEP">
+                <div class="input-icon">
+                    <i class='bx bxs-home-alt-2'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-icon">
+                <input type="text" name="rua" id="rua" placeholder="Logradouro">
+                <div class="input-icon">
+                    <i class='bx bxs-building-house'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-icon">
+                <input type="text" placeholder="Número">
+                <div class="input-icon">
+                    <i class='bx bx-home'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-icon">
+                <input type="text" name="bairro" id="bairro" placeholder="Bairro">
+                <div class="input-icon">
+                    <i class='bx bxs-city'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-icon">
+                <input type="text" name="cidade" id="cidade" placeholder="Cidade">
+                <div class="input-icon">
+                    <i class='bx bxs-city'></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="input-group">
+            <div class="input-group-icon">
+                <input type="text" name="uf" id="uf" placeholder="Estado">
+                <div class="input-icon">
+                    <i class='bx bxs-city'></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dados-pagamento">
+            <i class='bx bx-credit-card'></i>
+            <h1>DADOS PARA PAGAMENTO</h1>
+        </div>
+        
+        <div class="input-group">
+            <div class="input-group-icon">
+                <input type="text" placeholder="Nome impresso no cartão">
+                <div class="input-icon">
+                    <i class='bx bx-credit-card-front'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-icon">
+                <input type="text" placeholder="Número do cartão">
+                <div class="input-icon">
+                    <i class='bx bx-credit-card-front'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-icon">
+                <input type="text" placeholder="Validade">
+                <div class="input-icon">
+                    <i class='bx bx-credit-card-front'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-icon">
+                <input type="text" placeholder="CVV">
+                <div class="input-icon">
+                    <i class='bx bx-credit-card-front'></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dados-pagamento">
+            <i class='bx bx-credit-card'></i>
+            <h1>PARCELAS</h1>
+        </div>
+
+        <div class="input-group">
+                
+                <select name="parcelas" id="parcelas">
+                    <option value="1x">1x de R$ 1.785,00 (Sem juros)</option>
+                    <option value="2x">2x de R$ 892,50 (Sem juros)</option>
+                    <option value="3x">3x de R$ 595,00 (Sem juros)</option>
+                    <option value="4x">4x de R$ 446,25 (Sem juros)</option>
+                    <option value="5x">5x de R$ 357,00 (Sem juros)</option>
+                    <option value="6x">6x de R$ 297,50 (Sem juros)</option>
+                </select>
+
+            </div>
+        </div>
+        
+        <div class="resumo-do-pedido">
+            <div>
+                <h3>Resumo do pedido</h3>
+            </div>
+            
+            <div class="resumo">
+                <div>
+                    <h4>items (1):</h4>
+                    <h4>frete:</h4>
+                </div>
+                <div>
+                    <h6>R$ 1.785,00</h6>
+                    <h6>R$ 9,99</h6>
+                </div>
+            </div>
+        </div>
+    
+        <div class="pagamento">
+            <div class="btnPagar">
+                <p>Total:</p>
+                <button id="comprar" type="submit">EFETUAR COMPRA</button>
+            </div>
+            <div class="btnLimpar">
+                <p class="right">R$ 1.794,99</p>
+                <button id="esvaziar" type="reset">VOLTAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function limpa_formulário_cep() {
+            //Limpa valores do formulário de cep.
+            document.getElementById('rua').value = '';
+            document.getElementById('bairro').value = '';
+            document.getElementById('cidade').value = '';
+            document.getElementById('uf').value = '';
+
+            document.querySelector('#rua').removeAttribute('disabled');
+            document.querySelector('#bairro').removeAttribute('disabled');
+            document.querySelector('#cidade').removeAttribute('disabled');
+            document.querySelector('#uf').removeAttribute('disabled');
+
+        }
+
+        function carregaCEP(conteudo) {
+
+            if (!("erro" in conteudo)) {
+
+                //Atualiza os campos com os valores.
+                document.getElementById('rua').value = conteudo.logradouro;
+                document.getElementById('bairro').value = conteudo.bairro;
+                document.getElementById('cidade').value = conteudo.localidade;
+                document.getElementById('uf').value = conteudo.uf;
+
+                document.querySelector('#rua').removeAttribute('disabled');
+                document.querySelector('#rua').focus();
+
+            } else {
+
+                //CEP não Encontrado.
+                limpa_formulário_cep();
+                alert('CEP não encontrado.');
+            }
+        }
+
+        function pesquisacep(valor) {
+
+            //Nova variável "cep" somente com dígitos.
+            const cep = valor.replace(/\D/g, '');
+
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
+
+                //Expressão regular para validar o CEP.
+                const validacep = /^[0-9]{8}$/;
+
+                //Valida o formato do CEP.
+                if (validacep.test(cep)) {
+
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    document.getElementById('rua').value = '...';
+                    document.getElementById('bairro').value = '...';
+                    document.getElementById('cidade').value = '...';
+                    document.getElementById('uf').value = '...';
+
+                    document.querySelector('#rua').setAttribute('disabled', '');
+                    document.querySelector('#bairro').setAttribute('disabled', '');
+                    document.querySelector('#cidade').setAttribute('disabled', '');
+                    document.querySelector('#uf').setAttribute('disabled', '');
+
+                    const requisicao = new Request(`https://viacep.com.br/ws/${cep}/json/`, {
+                        method: 'GET',
+                        headers: {
+                            'Content-type': 'application/json',
+                        },
+                    })
+
+                    fetch(requisicao)
+                        .then(resposta => resposta.json())
+                        .then(resposta => carregaCEP(resposta));
+
+                } else {
+
+                    //cep é inválido.
+                    limpa_formulário_cep();
+                    alert('Formato de CEP inválido.');
+                }
+
+            } else {
+
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep();
+            }
+        }
+
+    </script>
+    <script src="request.js"></script>
+
+</body>
+</html>

@@ -46,51 +46,39 @@ function dadosProdutos(id) {
                                 <figure><img src="./img/Star 4.png" alt=""></figure>
                                 <figure><img src="./img/Star 5.png" alt=""></figure>
                             </div>
+                            <div class="produto-frete">
+                                <div class="frete-dados">
+                                    <h2>Frete</h2>
+                                    <input type="text" id="input-frete">
+                                    <button type="button" class="btnCalcularFrete">Calcular Frete</button>
+                                    <div class="divComprar">
+                                        <button type="button" class="btnFreteComprar">COMPRAR</button>
+                                    </div>
+                                </div>
+                            </div>
+            
+            `
+            document.querySelector('.produto-descricao-completa').innerHTML = 
+            `
+            <h2>Descrição Completa</h2>
+            <p>${produto[0].descricao}</p>
+            `
+        })
+        
+        // produtos relacionados
 
-                        </div>
-
-                        <div class="paginaProdutoPrincipalProdutoDescricaoC">
-                            <p>R$ ${produto.preco}</p>
-                            <p>Em até 6x de R$ ${(produto.preco / 6).toFixed(2)} sem juros </p>
-                        </div>
-                        <p> ${produto.descricao.substring(0,150) + '...'}</p>
-                    </div>
-
-                </div>
-
-                <div id="paginaProdutoPrincipalRelacionados"> 
-                </div>
-
-                <div class="paginaProdutoPrincipalDescricao">
-                        <h3>Descrição do Produto</h3>
-                        <p>${produto.descricao}</p>
-                 </div>
-
-            </section>
-
-            <aside class="paginaProdutoAside">
-
-                <div class="paginaProdutoAsideInteracao">
-
-                    <form action="" class="paginaProdutoAsideInteracaoComprar">
-                        <p>Status do produto: ${produto.status} </p>
-                        <div>
-                            <label for="quantidadeProduto">Quantidade: </label>
-                            <select name="quantidadeProduto" id="quantidadeProduto">
-                                <option value="1">1</option>
-                                <option value="10">10</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
-                            </select>
-                        </div>
-                        <button type="submit">COMPRAR</button>
-                        <button type="submit">Adicionar ao carrinho</button>
-                    </form>
-                        <div action="" class="paginaProdutoAsideInteracaoFrete" id = "paginaProdutoAsideInteracaoFrete">
-                        <!-- <h3>Frete</h3> -->
-                        <input type="text" name="CEP" id="CEP" placeholder="00000000-0">
-                        <button id="calcularFrete">Calcular frete</button>
-                        <div id="resultadoFrete"></div>
+        fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos/?categoria=${categoria}&page=2&limit=4`)
+            .then((relacionados) => relacionados.json())
+            .then((relacionado) => {
+                relacionado.forEach(item => {
+                    document.querySelector('#paginaProdutoPrincipalRelacionados').innerHTML += 
+                    `
+                    <div class="paginaProdutoPrincipalRelacionadosProdutos">
+                        <figure><img width="96px" height="96px" src="${item.img1}" alt="imagem do  ${item.nome}"></figure>
+                        <p> ${item.nome}</p>
+                        <p>R$ ${item.preco}</p>
+                        <p>Em até 6 x R$ ${(item.preco / 6).toFixed(2)} sem juros </p>
+                        <button type="submit" onclick="window.location.href = './produto.html?id=${item.id}'"> COMPRAR </button>
                     </div>
 
                 </div>

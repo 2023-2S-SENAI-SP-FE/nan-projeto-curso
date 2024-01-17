@@ -21,7 +21,7 @@ function listarProduto(){
                 <p class='tituloProduto'><a href="./produto.html?id=${item.id}">${item.nome}</a></p>
                 <strong>R$ ${item.preco}</strong>
                 <p class='parcProduto'> Em até 6x de R$ ${(item.preco / 6).toFixed(2)}</p>
-                <button type="button" class='btnComprar' onclick="window.location.href = './produto.html?id=${item.id}'"> COMPRAR </button>
+                <button type="button" class='btnComprar' onclick="adicionarItem(${item.id})"> COMPRAR </button>
                 `
                 prodCont.appendChild(div);
             });

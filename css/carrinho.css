@@ -1,0 +1,175 @@
+
+
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(87, 108, 188, 0.1);
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 20px;
+    border: 0px solid #000000;
+    margin: 20px 0 20px 20px;
+    padding: 10px 20px;
+    padding-right: 40px;
+}
+
+.produto-carrinho {
+    display: flex;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.produto-carrinho h3 {
+    font-weight: bold;
+}
+
+
+#Qproduto {
+    height: 50px;
+    width: 60px;
+    background-color: rgb(87, 108, 188, 0.1);
+    border: 0;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+.produtoCarrinho {
+    display: flex;
+    justify-content: space-between;
+    font-family:'Poppins';
+    border-bottom: 3px solid  rgb(87, 108, 188, 0.1);
+    margin: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+}
+
+.valor {
+    text-align: right;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.valor h3 {
+    font-weight: bold;
+    color: rgb(94, 94, 192);
+}
+
+.valor h2 {
+    color: rgb(132, 132, 208);
+}
+
+.excluir {
+    margin-left: 6px;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.frete {
+    display: flex;
+    justify-content: space-between;
+    font-family:'Poppins';
+    margin: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+}
+
+.frete h3 {
+    font-size: 15px;
+}
+
+.frete p {
+    color: rgb(94, 94, 192);
+    font-size: 16px;
+}
+
+.resumo-do-pedido {
+    font-family: 'Poppins';
+    margin: 0px 20px;
+    padding: 5px 20px;
+    padding-right: 5px;
+    font-size: 19px;
+    line-height: 2.0;
+    border-bottom: 3px solid rgb(87, 108, 188, 0.1);
+    background-color:  rgb(87, 108, 188, 0.1);
+}
+
+.resumo-do-pedido h3 {
+    font-weight: bold;
+}
+
+.resumo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumo h6 {
+    text-align: right;
+}
+
+.pagamento {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins';
+    margin: 0px 20px;
+    padding: 20px 20px;
+    padding-right: 5px;
+    font-size: 19px;
+    border: 0px solid;
+    font-weight: bold;
+    background-color: rgb(87, 108, 188, 0.1);
+}
+
+.pagamento h3 {
+    text-align: right;
+}
+
+#pagar {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: rgb(94, 94, 192);
+    color: white;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#esvaziar {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: rgb(208, 215, 237);
+    color: rgb(132, 132, 208);
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnPagar{
+    width: 70%;
+}
+
+.btnPagar p{
+    font-size: 22px;
+    color: #000;
+}
+
+
+.btnLimpar{
+    width: 30%;
+}
+
+.precoProduto{
+    font-size: 14px;
+    align-items: center;
+}
