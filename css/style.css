@@ -327,3 +327,46 @@ main {
     background-color: #edeff5;
     margin-left: 10px;
 }
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F9FB;
+    transition: opacity 1s, visibility 1s;
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #DDD;
+    border-top-color: #7449F5 ;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@media (max-width: 700px){
+    #searchbar {
+        width: 200px;
+    }
+}
