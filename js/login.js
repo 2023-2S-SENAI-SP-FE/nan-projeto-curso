@@ -15,6 +15,11 @@ function login(){
         nome: '',
         email: '',
         senha: '',
+        logradouro: '',
+        numero: '',
+        bairro: '',
+        estado: '',
+        cidade: '',
         id: ''
     }
 
@@ -24,6 +29,11 @@ function login(){
                 nome: item.nome,
                 email: item.email,
                 senha: item.senha,
+                logradouro: item.logradouro,
+                numero: item.numero,
+                bairro: item.bairro,
+                estado: item.estado,
+                cidade: item.cidade,
                 id: item.id
             }
         }
