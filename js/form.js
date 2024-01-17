@@ -71,8 +71,9 @@ fetch ('https://65995a81a20d3dc41cef99fb.mockapi.io/usuarios', {
     },
     body:JSON.stringify(usuario)
         })
-            console.log(usuario)
+            alert('Usuário Cadastrado com Sucesso!')
             limparForm();
+            window.location.href = "./login.html"
 }
  
 
