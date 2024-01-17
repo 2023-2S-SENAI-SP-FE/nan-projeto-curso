@@ -1,3 +1,7 @@
+
+
+
+
 fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos`)
     .then((response) => response.json())
     .then((data) => {
@@ -10,6 +14,41 @@ fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos`)
     let produtos = JSON.parse(localStorage.getItem("produtos"));
     let carrinho = JSON.parse(localStorage.getItem("carrinho"));
     if (carrinho == null){carrinho = []}
+
+    if(carrinho.length == 0){
+        document.querySelector('.carrin-info').innerHTML = 
+        `
+            <p>carrinho vazio</p>
+            <p class="strong">R$ 0,00</p>
+        `;
+    }else{
+        let itens = JSON.parse(localStorage.getItem('carrinho'));
+        
+         let sum = itens.reduce(function(accumulator,object){ 
+         return accumulator + parseFloat(object.preco)
+  },0); 
+
+    if(carrinho.length == 1){
+        
+        document.querySelector('.carrin-info').innerHTML = 
+        `
+            <p>
+            ${carrinho.length} item
+            </p>
+            <p class="strong">R$ ${(sum).toFixed(2)}</p>
+        `;
+    }else{
+        
+        document.querySelector('.carrin-info').innerHTML = 
+        `
+            <p>
+            ${carrinho.length} itens
+            </p>
+            <p class="strong">R$ ${(sum).toFixed(2)}</p>
+        `;
+    }
+
+    }
 
     function adicionarItem(id){
         let produto = produtos.find(function(produto){
@@ -33,11 +72,25 @@ fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos`)
          let sum = itens.reduce(function(accumulator,object){ 
          return accumulator + parseFloat(object.preco)
   },0); 
-        document.querySelector('.carrin-info').innerHTML = 
-        `
-            <p>${carrinho.length} items</p>
-            <p class="strong">R$ ${(sum).toFixed(2)}</p>
-        `;
+  if(carrinho.length == 1){
+        
+    document.querySelector('.carrin-info').innerHTML = 
+    `
+        <p>
+        ${carrinho.length} item
+        </p>
+        <p class="strong">R$ ${(sum).toFixed(2)}</p>
+    `;
+}else{
+    
+    document.querySelector('.carrin-info').innerHTML = 
+    `
+        <p>
+        ${carrinho.length} itens
+        </p>
+        <p class="strong">R$ ${(sum).toFixed(2)}</p>
+    `;
+}
     }
 
     // adicionarItem(1)
@@ -48,8 +101,9 @@ fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos`)
         localStorage.setItem("carrinho", JSON.stringify(temp));
 
     }
-
     // removerItem(5);
+
+    
     function listarCarrinho(){
         let itens = JSON.parse(localStorage.getItem('carrinho'));
         itens.forEach(item => {
@@ -103,7 +157,9 @@ fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos`)
         document.querySelector('.resumo-do-pedido').innerHTML ='O seu carrinho está vazio'
         document.querySelector('.produtosCarrinho').remove();
         document.querySelector('.topo').remove();
-        
+        document.querySelector('.carrin-info').innerHTML = 
+        `
+            <p>carrinho vazio</p>
+            <p class="strong">R$ 0,00</p>
+        `;
     }
-
-    listarCarrinho()
