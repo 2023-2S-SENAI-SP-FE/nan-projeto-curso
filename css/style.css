@@ -593,3 +593,18 @@ main {
         width: 200px;
     }
 }
+
+.dadosFrete{
+    margin-top: 1rem;
+}
+
+.dadosFrete p{
+    color: #576CBC;
+}
+
+.dadosFrete .valorFrete{
+    margin: 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+}

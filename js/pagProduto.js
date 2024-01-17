@@ -32,9 +32,12 @@ async function dadosProduto() {
                                 <div class="frete-dados">
                                     <h2>Frete</h2>
                                     <input type="text" id="input-frete">
-                                    <button type="button" class="btnCalcularFrete">Calcular Frete</button>
+                                    <button type="button" class="btnCalcularFrete" onclick="calcularFrete()">Calcular Frete</button>
                                     <div class="divComprar">
                                         <button type="button" class="btnFreteComprar" onclick="adicionarItem(${produto[0].id})">COMPRAR</button>
+                                    </div>
+                                    <div class="dadosFrete">
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -46,6 +49,8 @@ async function dadosProduto() {
             <p>${produto[0].descricao}</p>
             `
         })
+
+    
         
         // produtos relacionados
 
@@ -67,6 +72,27 @@ async function dadosProduto() {
             })
         
 }
+
+
+function calcularFrete(){
+    let inputCep = document.querySelector('#input-frete').value;
+    fetch(`https://viacep.com.br/ws/${inputCep}/json/`)
+        .then((res) => res.json())
+        .then((dadosCep) => {
+            if(dadosCep.logradouro === undefined){
+                alert('digite um cep válido');
+            }else{
+
+                document.querySelector('.dadosFrete').innerHTML = 
+                `
+                <p>${dadosCep.logradouro}</p>
+                <p>${dadosCep.localidade} - ${dadosCep.uf}</p>
+                <p class="valorFrete"> FRETE GRÁTIS </p>
+                `
+            }
+        })
+}
+
 
 dadosProduto();
 

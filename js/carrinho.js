@@ -85,13 +85,13 @@ fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos`)
             </div>
             <div>
                 <h6>R$ ${(sum).toFixed(2)}</h6>
-                <h6>R$ 9,99</h6>
+                <h6>GRÁTIS</h6>
             </div>
         `
 
         document.querySelector('.btnLimpar').innerHTML = 
         `
-            <h3>R$ ${(sum + 9.99).toFixed(2)}</h3>
+            <h3>R$ ${(sum).toFixed(2)}</h3>
             <button id="esvaziar" type="reset" onclick="limparCarrinho()">LIMPAR CARRINHO</button>
         `
   
