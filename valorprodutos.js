@@ -19,12 +19,14 @@ function valorProduto() {
 
 function DetalhesCompra() {
 
-    let MostrainformCompra =document.querySelector(".overlay");
+
+
+    let MostrainformCompra =document.querySelector(".detalhesinfo");
 
     fetch ("produtoSite.json").then((response) => {
         response.json().then((produtoSite) =>{
             produtoSite.total.map((total) => {
-                MostrainformCompra.innerHTML += `<li class="detalhesinfo ocultosobrepoe"> ${total.valor} </li>`
+                MostrainformCompra.innerHTML += `<li class="buttondetalhes detalhesinfo ocultosobrepoe"> ${total.valor} </li>`
             })
         })
     })

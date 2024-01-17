@@ -119,7 +119,7 @@ button{
 
 .ocultosobrepoe{
 
-    display: hidden;
+    display:none;
 }
 
 .oculto:active {
@@ -127,7 +127,9 @@ button{
     
 }
 
-.overlay:active {
+
+.buttondetalhes:active{
+
     position: absolute;
     top: 0;
     left: 0;
@@ -138,8 +140,31 @@ button{
     animation: overlay .3s ease-out 1 forwards;
 }
 
-.detalhesinfo:active {
+.overlay:active{
+
     position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.533);
+    z-index: 3;
+    width: 100%;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation: 0.3s ease-out 0s 1 normal forwards running overlay;
+
+}
+
+
+
+p {
+    line-height: 1.2;
+}
+    
+
+.detalhesinfo:active {
+    visibility: hidden;
+    position: center;
     width: 200px;
     background-color: #fff;
     padding: 20px;
@@ -151,3 +176,62 @@ button{
     z-index: 3;
     animation: aparecer .3s ease-out 1 forwards;
 }
+
+span.html-tag::before {
+    content: "<";
+}
+
+span.html-tag::after {
+    content: ">";
+}
+
+.dadoscompra{
+    display: none;
+}
+
+.sobreposicao{
+    position: absolute;
+    z-index: 4;
+
+}
+
+.dadoscompra:active{
+    z-index: 3;
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 5px solid #000;
+}
+
+span.caption {
+    position: absolute;
+    bottom: -30px;
+    color: #fff;
+    font-variant: petite-caps;
+    width: 100%;
+    text-align: center;
+    margin-left: -20px;
+}
+
+
+/* @keyframes aparecer {
+    from {
+        margin-left: -50px;
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes overlay {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+} */
