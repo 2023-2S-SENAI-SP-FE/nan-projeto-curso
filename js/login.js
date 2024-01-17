@@ -61,3 +61,9 @@ function logout(){
     localStorage.removeItem('usuarioLogado');
     window.location.href = './index.html';
 }
+
+document.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      login()
+    }
+  });
