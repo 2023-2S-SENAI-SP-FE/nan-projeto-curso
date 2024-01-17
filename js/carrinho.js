@@ -98,16 +98,12 @@ fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos`)
     }
 
     function limparCarrinho(){
-        document.querySelector('.produtosCarrinho').innerHTML = 
-        `
-        <div class="produto">
-            <h1> O seu carrinho está vazio </h1>
-        </div>
-        `
-        document.querySelector('.frete').innerHTML = '';
-        document.querySelector('.pagamento').innerHTML = '';
-        document.querySelector('.resumo-do-pedido').innerHTML = '';
-        localStorage.removeItem('carrinho')
+        localStorage.removeItem('carrinho');
+        document.querySelector('.pagamento').remove();
+        document.querySelector('.resumo-do-pedido').innerHTML ='O seu carrinho está vazio'
+        document.querySelector('.produtosCarrinho').remove();
+        document.querySelector('.topo').remove();
+        
     }
 
     listarCarrinho()
