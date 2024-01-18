@@ -106,21 +106,28 @@ fetch(`https://655f44c1879575426b44f818.mockapi.io/api/produtos`)
     
     function listarCarrinho(){
         let itens = JSON.parse(localStorage.getItem('carrinho'));
-        itens.forEach(item => {
-            document.querySelector('.produtosCarrinho').innerHTML += 
-            `
-            <div class="produtoCarrinho">
-            <div class="produto-carrinho">
+        
+        if (itens.length == 0){
+            limparCarrinho();
+        }else{
+
+            
+            itens.forEach(item => {
+                document.querySelector('.produtosCarrinho').innerHTML += 
+                `
+                <div class="produtoCarrinho">
+                <div class="produto-carrinho">
                 <div class="titulo"><h3 class="tituloProduto">${item.nome}</p></div>
-            </div>
-           
-            <div class="valor">
+                </div>
+                
+                <div class="valor">
                 <h3 class="precoProduto">R$ ${item.preco}</h3>
-            </div>
-        </div>
-            `;
-        });
-        valores()
+                </div>
+                </div>
+                `;
+            });
+            valores()
+        }
     }
 
 
