@@ -9,6 +9,7 @@
 * a {
     text-decoration: none;
     color: #fff;
+    padding: 10px;
 }
 
 .linkLoja{
@@ -401,12 +402,20 @@ footer{
     main{
         margin-top: 80px;
     }
+    * a{
+        padding: 0;
+    }
     
 }
 
 @media (max-width: 800px){
     main #stats-content{
         grid-template-columns: 1fr 1fr;
+    }
+
+    
+    * a{
+        padding: 0;
     }
 }
 
@@ -416,5 +425,10 @@ footer{
     }
     main #stats-content .stats-box{
         width: 90%;
+    }
+
+    
+    * a{
+        padding: 0;
     }
 }
