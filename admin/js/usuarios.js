@@ -43,6 +43,7 @@ function listarUsuarioId(id) {
         document.getElementById('nivel').value = usuario.nivel
 
     })
+    document.querySelector('.button').innerHTML = `<button class="btnCadastrar" onclick="editarUsuario(${id})">Editar</button>`;
 }
 
 function editarUsuario(id) {
@@ -60,6 +61,7 @@ function editarUsuario(id) {
             cidade: document.getElementById('cidade').value,
             nivel: document.getElementById('nivel').value
     }
+
     fetch(`https://65995a81a20d3dc41cef99fb.mockapi.io/usuarios/${id}`, {
     method:'PUT' ,
     headers: {
@@ -67,7 +69,9 @@ function editarUsuario(id) {
     },
         body: JSON.stringify(data),
     })
-    console.log('ok')
+    limparFormulario()
+    alert('Usuário Editado com Sucess')
+    document.querySelector('.button').innerHTML = `<button class="btnCadastrar" onclick="cadastrarUsuario(${id})">Cadastrar</button>`
 }
 
 function cadastrarUsuario(){
