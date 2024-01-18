@@ -60,7 +60,7 @@ function logado(){
         <p><a href="./login.html" ">Login</a> <span>| <a href="./cadastro.html">Cadastrar</a></span></p>`;
     }else{
         logado.innerHTML = `<strong> Olá, ${usuarioLogado.nome} </strong>
-        <p><a href="#" onclick="./meusPedidos.html">Meus Pedidos</a> <span>| <a href="#" onclick="logout()">Sair</a></span></p>`;
+        <p>Meus Pedidos <span>| <a href="#" onclick="logout()">Sair</a></span></p>`;
         
     }
 
