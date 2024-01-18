@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div id="header-title">
+            <h1>Olá, <span class="strong" id="logado"></span> [<a href="#" onclick="logout()">logout</a>]</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./categorias.html">Categorias</a></li>
+                <li><a href="./produtos.html">Produtos</a></li>
+                <li><a href="./pedidos.html">Pedidos</a></li>
+                <li><a href="./usuarios.html">Usuários</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="main-header">
+            <h2>Dashboard <span>/ Página Inicial</span></h2>
+        </div>
+
+        <div id="stats-header">
+            <h2>Estatísticas</h2>
+        </div>
+        <div id="stats-content">
+            <div class="stats-box blue">
+                <h1></h1>
+                <p>Pedidos</p>
+            </div>
+            <div class="stats-box yellow">
+                <h1></h1>
+                <p>Clientes</p>
+            </div>
+            <div class="stats-box green">
+                <h1></h1>
+                <p>Produtos</p>
+            </div>
+            <div class="stats-box red">
+                <h1></h1>
+                <p>Categorias</p>
+            </div>           
+        </div>
+
+        
+
+    </main>
+
+    <footer>
+        <h4>Administração - NAN Autopeças</h4>
+    </footer>
+    <script src="./js/stats.js"></script>
+    <script src="./js/login.js"></script>
+    
+    <script>
+        logado(); // verifica se o usuário está logado
+        stats('https://65995a81a20d3dc41cef99fb.mockapi.io/pedidos','blue'); // quantidade de clientes
+        stats('https://65995a81a20d3dc41cef99fb.mockapi.io/usuarios','yellow'); // quantidade de clientes
+        stats('https://655f44c1879575426b44f818.mockapi.io/api/produtos','green'); // quantidade de produtos
+        stats('https://655f44c1879575426b44f818.mockapi.io/api/categorias','red'); // quantidade de categorias
+    </script>
+</body>
+</html>
