@@ -22,15 +22,15 @@ button{
 }
 
 .paginaProduto{
-    /* width: 85%; */
-    height: 1068px;
+    /* height: 1068px; */
     top: -178px;
     left: -219px;
     /* background: #FFFFFF; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    width: 950px;
 }
 
 .paginaProduto p {
@@ -41,7 +41,7 @@ button{
 
 
 .paginaProdutoPrincipal{
-    width: 695px;
+    width: 720px;
     height: 1068px;
     top: -94px;
     left: -193px;
@@ -51,8 +51,8 @@ button{
 }
 
 .paginaProdutoPrincipalProduto{
-    width: 695px;
-    Height: 350px;
+    /* width: 720px; */
+    Height: 360px;
     top: -94px;
     left: -193px;
     background: #576CBC1A;
@@ -60,6 +60,7 @@ button{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    padding: 10px;
 }
 
 .paginaProdutoPrincipalProdutoMiniaturas{
@@ -183,6 +184,7 @@ button{
     line-height: 17px;
     letter-spacing: 0em;
     text-align: center;
+    padding: 10px;
 }
 
 .paginaProdutoPrincipalRelacionadosProdutos p:nth-child(2){
@@ -229,8 +231,8 @@ button{
 }
 
 .paginaProdutoPrincipalDescricao{
-    width: 695px;
-    height: 208px;
+    /* width: 695px; */
+    /* height: 208px; */
     top: 451px;
     left: -193px;
     background: #576CBC1A;
@@ -238,6 +240,7 @@ button{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding: 10px;
 }
 
 .paginaProdutoPrincipalDescricao h3{
@@ -255,7 +258,7 @@ button{
 
 .paginaProdutoPrincipalDescricao p{
     width: 663px;
-    height: 145px;
+    /* height: 145px; */
     top: 498px;
     left: -178px;
     font-family: Poppins;
@@ -264,6 +267,7 @@ button{
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
+    
 }
 
 .paginaProdutoAside{
@@ -398,3 +402,7 @@ button{
 }
 
 
+#produto-container-pai{
+    display: flex;
+    justify-content: center;
+}
