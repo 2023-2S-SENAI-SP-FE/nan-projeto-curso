@@ -11,6 +11,20 @@
     color: #fff;
 }
 
+.linkLoja{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.linkLoja a {
+    color: #000;
+}
+
+.linkLoja a:hover{
+    color: #576CBC;
+    text-decoration: underline;
+}
+
 
 /* LOGIN */
 #header-login{
