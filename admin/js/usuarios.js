@@ -43,6 +43,7 @@ function listarUsuarioId(id) {
         document.getElementById('nivel').value = usuario.nivel
 
     })
+    voltarTopo();
     document.querySelector('.button').innerHTML = `<button class="btnCadastrar" onclick="editarUsuario(${id})">Editar</button>`;
 }
 
@@ -113,4 +114,12 @@ function excluirUsuario(id){
     alert('Usuário excluído com sucesso!');
     listarUsuarios();
 
+}
+
+
+function voltarTopo() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
 }

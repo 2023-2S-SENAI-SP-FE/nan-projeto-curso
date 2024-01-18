@@ -50,7 +50,7 @@ function listarCategoriaId(id){
         .then((categoria) => {
             document.getElementById('nome').value = categoria.nome
         })
-
+    voltarTopo();
     document.querySelector('.button').innerHTML = `<button class="btnCadastrar" onclick="editarCategoria(${id})">Editar</button>`;
 }
 
@@ -84,3 +84,9 @@ function excluirCategoria(id){
     listarCategorias();
 }
 
+function voltarTopo() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+}

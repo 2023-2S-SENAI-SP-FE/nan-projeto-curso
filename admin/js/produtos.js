@@ -96,7 +96,7 @@ function listarProdutoId(id){
             document.getElementById('img3').value = produto.img3,
             document.getElementById('img4').value = produto.img4
         })
-
+        voltarTopo();
         document.querySelector('.button').innerHTML = `<button class="btnCadastrar" onclick="editarProduto(${id})">Editar</button>`;
 }
 
@@ -147,4 +147,11 @@ function listarCategorias(){
                 `;
             }
         })
+}
+
+function voltarTopo() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
 }
