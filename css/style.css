@@ -7,6 +7,16 @@
     font-family: 'Poppins', sans-serif;
     outline: 0;
 }
+
+
+.carrinho a{
+    color: #000;
+
+}
+
+.carrinho a:hover {
+    color: #576CBC;
+}
 #searchbar{
     display: flex;
     border-radius: 5px;
