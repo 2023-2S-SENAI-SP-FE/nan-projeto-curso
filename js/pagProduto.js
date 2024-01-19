@@ -75,15 +75,7 @@ function dadosProdutos(id) {
 
                     <form action="" class="paginaProdutoAsideInteracaoComprar">
                         <p>Status do produto: ${produto.status} </p>
-                        <div>
-                            <label for="quantidadeProduto">Quantidade: </label>
-                            <select name="quantidadeProduto" id="quantidadeProduto">
-                                <option value="1">1</option>
-                                <option value="10">10</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
-                            </select>
-                        </div>
+                        
                         <button type="button" onclick="adicionarItem(${produto.id})">Adicionar ao carrinho</button>
                         
                     </form>
